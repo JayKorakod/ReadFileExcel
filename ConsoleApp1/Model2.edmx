@@ -1,0 +1,1714 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model2.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MAS_MATERIAL_MASTER">
+          <Key>
+            <PropertyRef Name="MATERIAL_NO" />
+          </Key>
+          <Property Name="MATERIAL_NO" Type="nvarchar2" MaxLength="18" Nullable="false" />
+          <Property Name="UNIQUE_ID" Type="number" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="LIFE_CYCLE" Type="nvarchar2" MaxLength="20" />
+          <Property Name="K2_REQUEST_NO" Type="nvarchar2" MaxLength="100" Nullable="false" />
+          <Property Name="LONG_DESCRIPTION" Type="nvarchar2" MaxLength="200" Nullable="false" />
+          <Property Name="DESCRIPTION1" Type="nvarchar2" MaxLength="40" Nullable="false" />
+          <Property Name="DESCRIPTION2" Type="nvarchar2" MaxLength="40" Nullable="false" />
+          <Property Name="MAT_DESCRIPTION_TH" Type="nvarchar2" MaxLength="250" />
+          <Property Name="RAW_MAT_DESC_TH" Type="nvarchar2" MaxLength="250" />
+          <Property Name="ENGINEERING_CODE" Type="nvarchar2" MaxLength="100" />
+          <Property Name="FORMULA_USAGE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="UOM_CODE" Type="nvarchar2" MaxLength="3" Nullable="false" />
+          <Property Name="BASE_UOM" Type="nvarchar2" MaxLength="3" Nullable="false" />
+          <Property Name="CONVERT_UOM" Type="number" Precision="11" Scale="3" />
+          <Property Name="IQC" Type="nvarchar2" MaxLength="3" />
+          <Property Name="CUST_CODE" Type="nvarchar2" MaxLength="3" />
+          <Property Name="SIZE_CODE" Type="nvarchar2" MaxLength="25" />
+          <Property Name="FIRST_REVISION" Type="nvarchar2" MaxLength="5" />
+          <Property Name="SPECIAL_INSTRUCTION" Type="nvarchar2" MaxLength="200" />
+          <Property Name="REMARK" Type="nvarchar2" MaxLength="255" />
+          <Property Name="MATERIAL_TYPE" Type="nvarchar2" MaxLength="4" Nullable="false" />
+          <Property Name="ORIGIN_CODE" Type="nvarchar2" MaxLength="4" Nullable="false" />
+          <Property Name="GROUP_CODE" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CATEGORY_CODE" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="UTL_DRAWING_NO" Type="nvarchar2" MaxLength="40" />
+          <Property Name="UTL_DRAWING_REV" Type="nvarchar2" MaxLength="20" />
+          <Property Name="UTL_QUALIFICATION" Type="nvarchar2" MaxLength="40" />
+          <Property Name="SHELF_LIFE" Type="number" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="MIN_SHELF_LIFE" Type="number" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="FLOOR_LIFE_DAY" Type="number" Precision="4" Scale="0" />
+          <Property Name="FLOOR_LIFE_HR" Type="number" Precision="4" Scale="0" />
+          <Property Name="EXTEND_SHELF_LIFE" Type="number" Precision="4" Scale="0" />
+          <Property Name="CONSIGNMENT_FLAG" Type="nvarchar2" MaxLength="3" />
+          <Property Name="REQUESTER_EN" Type="nvarchar2" MaxLength="50" />
+          <Property Name="REQUESTER_NAME" Type="nvarchar2" MaxLength="100" />
+          <Property Name="REQUESTER_DEPT" Type="nvarchar2" MaxLength="100" />
+          <Property Name="REQUESTER_EXT" Type="nvarchar2" MaxLength="10" />
+          <Property Name="REQUEST_JUSTIFICATION" Type="nvarchar2" MaxLength="500" />
+          <Property Name="LAST_APPROVE_EN" Type="nvarchar2" MaxLength="50" />
+          <Property Name="LAST_APPROVE_NAME" Type="nvarchar2" MaxLength="100" />
+          <Property Name="ADHESIVE_MATERIAL" Type="nvarchar2" MaxLength="50" />
+          <Property Name="ADHESIVE_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="ADHESIVE_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="AGING_TEMP" Type="number" Precision="3" Scale="0" />
+          <Property Name="AGING_TIME" Type="number" Precision="3" Scale="0" />
+          <Property Name="ALLOW_X_OUT" Type="nvarchar2" MaxLength="50" />
+          <Property Name="ALLOWANCE" Type="number" Precision="8" Scale="2" />
+          <Property Name="ALLOY" Type="nvarchar2" MaxLength="50" />
+          <Property Name="APPLICATION" Type="nvarchar2" MaxLength="50" />
+          <Property Name="BAG_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="BAG_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="BAKE" Type="nvarchar2" MaxLength="200" />
+          <Property Name="BASE_FILM_THK" Type="number" Precision="8" Scale="4" />
+          <Property Name="BASE_MATERIAL" Type="nvarchar2" MaxLength="100" />
+          <Property Name="BATH_LIFE" Type="number" Precision="7" Scale="2" />
+          <Property Name="BLADE_LIFE" Type="number" Precision="8" Scale="2" />
+          <Property Name="BOND_FINGER_FINISH" Type="nvarchar2" MaxLength="200" />
+          <Property Name="BOND_FINGER_PITCH" Type="number" Precision="4" Scale="2" />
+          <Property Name="BOND_PAD_LAYER_STACK" Type="nvarchar2" MaxLength="50" />
+          <Property Name="BONDING_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="BOTTLE_NECK" Type="nvarchar2" MaxLength="50" />
+          <Property Name="BOTTOM_PLATING" Type="nvarchar2" MaxLength="200" />
+          <Property Name="BOX_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="BOX_HEIGHT" Type="number" Precision="6" Scale="2" />
+          <Property Name="BOX_LAYER" Type="nvarchar2" MaxLength="50" />
+          <Property Name="BOX_STYLE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="BPO_UM" Type="number" Precision="5" Scale="2" />
+          <Property Name="BPP_UM" Type="number" Precision="5" Scale="2" />
+          <Property Name="BTM_POCKET_PITCH" Type="number" Precision="8" Scale="4" />
+          <Property Name="BUBBLE_SHEET" Type="nvarchar2" MaxLength="50" />
+          <Property Name="BUBBLE_SIZE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="BUILD_UP" Type="nvarchar2" MaxLength="200" />
+          <Property Name="BUILD_UP_MATERIAL" Type="nvarchar2" MaxLength="200" />
+          <Property Name="BUMP_COMPOSITION" Type="nvarchar2" MaxLength="50" />
+          <Property Name="BUMP_DIAMETER" Type="number" Precision="5" Scale="2" />
+          <Property Name="BUMP_DIAMETER_X" Type="number" Precision="5" Scale="2" />
+          <Property Name="BUMP_DIAMETER_Y" Type="number" Precision="5" Scale="2" />
+          <Property Name="BUMP_PAD_FINISH" Type="nvarchar2" MaxLength="200" />
+          <Property Name="BUMP_PITCH" Type="number" Precision="4" Scale="2" />
+          <Property Name="BUMP_PLACEMENT" Type="nvarchar2" MaxLength="50" />
+          <Property Name="BURSTING_STRENGTH" Type="nvarchar2" MaxLength="100" />
+          <Property Name="BUSS_FLAG" Type="nvarchar2" MaxLength="20" />
+          <Property Name="CAN_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CAN_DIAMETER" Type="number" Precision="5" Scale="2" />
+          <Property Name="CAN_LENGTH" Type="number" Precision="5" Scale="2" />
+          <Property Name="CAN_MATERIAL" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CAN_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="CAP_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CAP_DIAMETER" Type="number" Precision="5" Scale="2" />
+          <Property Name="CAP_LENGTH" Type="number" Precision="5" Scale="2" />
+          <Property Name="CAP_MATERIAL" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CAP_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="CAPACITANCE" Type="number" Precision="8" Scale="4" />
+          <Property Name="CARRIER_TAPE_WIDTH" Type="number" Precision="4" Scale="2" />
+          <Property Name="CC_SYR" Type="number" Precision="3" Scale="0" />
+          <Property Name="CHEMICAL_CLASS" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CHEMICAL_PROCESS" Type="nvarchar2" MaxLength="200" />
+          <Property Name="CHEMICAL_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CHEMISTRY" Type="nvarchar2" MaxLength="100" />
+          <Property Name="CIRCULAR_BUMP" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CIRCULAR_BUMP_HEIGHT" Type="number" Precision="8" Scale="4" />
+          <Property Name="CIRCULAR_BUMP_PITCH" Type="number" Precision="8" Scale="4" />
+          <Property Name="CLIP_PACKING" Type="nvarchar2" MaxLength="100" />
+          <Property Name="CLIP_QTY" Type="number" Precision="10" Scale="0" />
+          <Property Name="CLIP_WIDTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="COL_PER_BLOCK" Type="number" Precision="10" Scale="0" />
+          <Property Name="COL_PER_PANEL" Type="number" Precision="3" Scale="0" />
+          <Property Name="COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="COMPOSITION" Type="nvarchar2" MaxLength="250" />
+          <Property Name="COMPOSITION_TYPE" Type="nvarchar2" MaxLength="200" />
+          <Property Name="COMPOUND_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CONDITION" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CONNECTED_AREA" Type="number" Precision="5" Scale="2" />
+          <Property Name="CONTAINER" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CORE_MATERIAL" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CORE_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="CORE_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CORE_WIDTH" Type="number" Precision="6" Scale="2" />
+          <Property Name="CORNER_RELIEF" Type="nvarchar2" MaxLength="50" />
+          <Property Name="COVER_TAPE_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="COVER_TAPE_WIDTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="CRYSTAL_TEMP" Type="number" Precision="3" Scale="0" />
+          <Property Name="CTE_ABOVE_TG" Type="number" Precision="4" Scale="2" />
+          <Property Name="CTE_BELOW_TG" Type="number" Precision="4" Scale="2" />
+          <Property Name="CU_BONDING_APP" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CU_CLIP_REEL_SIZE" Type="number" Precision="5" Scale="2" />
+          <Property Name="CU_POST_STRUCTURE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CU_POST_THICKNESS" Type="number" Precision="5" Scale="2" />
+          <Property Name="CURE_TEMPERATURE" Type="number" Precision="3" Scale="0" />
+          <Property Name="CURE_TIME" Type="number" Precision="3" Scale="0" />
+          <Property Name="CURVE" Type="nvarchar2" MaxLength="100" />
+          <Property Name="CUSHION_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CUSHION_LENGTH" Type="number" Precision="4" Scale="2" />
+          <Property Name="CUSHION_MATERIAL" Type="nvarchar2" MaxLength="50" />
+          <Property Name="CUSHION_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="CUSHION_WIDTH" Type="number" Precision="4" Scale="2" />
+          <Property Name="DAF_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="DAP_HOR" Type="number" Precision="8" Scale="4" />
+          <Property Name="DAP_LF_HOR" Type="number" Precision="8" Scale="4" />
+          <Property Name="DAP_LF_VER" Type="number" Precision="8" Scale="4" />
+          <Property Name="DAP_VER" Type="number" Precision="8" Scale="4" />
+          <Property Name="DENSITY" Type="nvarchar2" MaxLength="200" />
+          <Property Name="DESICCANT_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="DESICCANT_UNIT" Type="nvarchar2" MaxLength="50" />
+          <Property Name="DIAMENSION_W1" Type="number" Precision="8" Scale="2" />
+          <Property Name="DIAMENSION_W2" Type="number" Precision="8" Scale="2" />
+          <Property Name="DIAMENSION_W3" Type="number" Precision="8" Scale="2" />
+          <Property Name="DIAMETER_MM" Type="number" Precision="5" Scale="2" />
+          <Property Name="DIAMETER_UM" Type="number" Precision="5" Scale="2" />
+          <Property Name="DIAMOND_GRIT" Type="number" Precision="4" Scale="2" />
+          <Property Name="DICING_TAPE" Type="nvarchar2" MaxLength="100" />
+          <Property Name="DICING_TAPE_BASE_FILM" Type="nvarchar2" MaxLength="50" />
+          <Property Name="DICING_TAPE_PART" Type="nvarchar2" MaxLength="100" />
+          <Property Name="DICING_TAPE_SUPPLIER" Type="nvarchar2" MaxLength="100" />
+          <Property Name="DICING_TAPE_UV_COND" Type="nvarchar2" MaxLength="100" />
+          <Property Name="DIE_BACK_FINISHING" Type="nvarchar2" MaxLength="50" />
+          <Property Name="DIE_FINAL_THICKNESS" Type="number" Precision="6" Scale="2" />
+          <Property Name="DIE_FRONT_FINISHING" Type="nvarchar2" MaxLength="50" />
+          <Property Name="DIE_ID" Type="nvarchar2" MaxLength="80" />
+          <Property Name="DIE_INTIAL_THICKNESS" Type="number" Precision="6" Scale="2" />
+          <Property Name="DIE_PHYSICAL" Type="nvarchar2" MaxLength="50" />
+          <Property Name="DIE_REVISION" Type="nvarchar2" MaxLength="5" />
+          <Property Name="DIE_SHELF" Type="nvarchar2" MaxLength="8" />
+          <Property Name="DIE_SIZE" Type="nvarchar2" MaxLength="20" />
+          <Property Name="DIE_SIZE_X" Type="number" Precision="6" Scale="2" />
+          <Property Name="DIE_SIZE_Y" Type="number" Precision="6" Scale="2" />
+          <Property Name="DIE_SPEC" Type="nvarchar2" MaxLength="15" />
+          <Property Name="DIE_SUPPLIER_NAME" Type="nvarchar2" MaxLength="100" />
+          <Property Name="DIMENSION_A" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_C" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_D" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_E" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_F" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_G" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_H" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_I" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_J" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_K" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_L" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_M" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_MM" Type="number" Precision="4" Scale="2" />
+          <Property Name="DIMENSION_N" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_O" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_P" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_Q" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_R" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_S" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_T" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_U" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_V" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_W" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_X" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_Y" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_Z" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMPLE_DESIGN" Type="nvarchar2" MaxLength="50" />
+          <Property Name="DOWN_SET_DEPTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="EIA_SIZE_CODE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="ELASTIC" Type="nvarchar2" MaxLength="200" />
+          <Property Name="ELECTRICAL_RESIS" Type="nvarchar2" MaxLength="200" />
+          <Property Name="ELONGATION" Type="number" Precision="8" Scale="2" />
+          <Property Name="EPOXY_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="ESD_OR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="EXPOSE_PAD_HOR" Type="number" Precision="8" Scale="4" />
+          <Property Name="EXPOSE_PAD_VER" Type="number" Precision="8" Scale="4" />
+          <Property Name="EXPOSURE_MAX" Type="number" Precision="6" Scale="2" />
+          <Property Name="EXPOSURE_MIN" Type="number" Precision="6" Scale="2" />
+          <Property Name="EXPOSURE_THICKNESS" Type="number" Precision="6" Scale="2" />
+          <Property Name="FACE_ANGLE" Type="number" Precision="5" Scale="2" />
+          <Property Name="FC_PAD_FINISH" Type="nvarchar2" MaxLength="200" />
+          <Property Name="FILLER_SIZE_AVG" Type="number" Precision="8" Scale="4" />
+          <Property Name="FILLER_SIZE_MAX" Type="number" Precision="8" Scale="4" />
+          <Property Name="FILLER_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="FIRST_POCKET_X" Type="number" Precision="8" Scale="4" />
+          <Property Name="FIRST_POCKET_Y" Type="number" Precision="8" Scale="4" />
+          <Property Name="FLAG_BUSS" Type="nvarchar2" MaxLength="50" />
+          <Property Name="FLAG_NO_TAPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="FLUX_CLASSIFICATION" Type="nvarchar2" MaxLength="50" />
+          <Property Name="FORMAT" Type="nvarchar2" MaxLength="50" />
+          <Property Name="GAP_BETWEEN_BOAC" Type="number" Precision="5" Scale="2" />
+          <Property Name="GAS_COMPOSITION" Type="nvarchar2" MaxLength="50" />
+          <Property Name="GEL_COAT" Type="nvarchar2" MaxLength="50" />
+          <Property Name="GEL_TIME" Type="number" Precision="5" Scale="2" />
+          <Property Name="GLUE_THICKNESS" Type="number" Precision="5" Scale="2" />
+          <Property Name="GLUE_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="GOLD_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="GRIT_CONCENTRATION" Type="nvarchar2" MaxLength="50" />
+          <Property Name="GROUND_WIRE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="HALOGEN_FREE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="HALOGEN_FREE_FLGAG" Type="nvarchar2" MaxLength="50" />
+          <Property Name="HARD_AU" Type="nvarchar2" MaxLength="200" />
+          <Property Name="HEIGHT" Type="number" Precision="8" Scale="4" />
+          <Property Name="HIC_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="HIC_DOT" Type="nvarchar2" MaxLength="50" />
+          <Property Name="HIC_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="HOLE_DIAMETER" Type="number" Precision="4" Scale="2" />
+          <Property Name="HUB_DIAMETER" Type="number" Precision="8" Scale="4" />
+          <Property Name="IN_SIDE_DIMENSION" Type="number" Precision="8" Scale="4" />
+          <Property Name="INDUCTANCE" Type="number" Precision="8" Scale="4" />
+          <Property Name="INK" Type="nvarchar2" MaxLength="500" />
+          <Property Name="INK_TYPE" Type="nvarchar2" MaxLength="200" />
+          <Property Name="INNER_SHAMFER" Type="number" Precision="5" Scale="2" />
+          <Property Name="IS_OPERATING_SUPPLY" Type="nvarchar2" MaxLength="200" />
+          <Property Name="LABEL_ADHESIVE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="LABEL_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="LABEL_CORNER" Type="number" Precision="5" Scale="2" />
+          <Property Name="LABEL_GAP" Type="number" Precision="4" Scale="2" />
+          <Property Name="LABEL_HEIGHT" Type="number" Precision="4" Scale="2" />
+          <Property Name="LABEL_PRINT" Type="nvarchar2" MaxLength="50" />
+          <Property Name="LABEL_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="LABEL_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="LABEL_WIDTH" Type="number" Precision="6" Scale="2" />
+          <Property Name="LAYER_COUNT" Type="number" Precision="3" Scale="0" />
+          <Property Name="LEAD_COUNT" Type="number" Precision="6" Scale="0" />
+          <Property Name="LEAD_COUNT_IO" Type="number" Precision="3" Scale="0" />
+          <Property Name="LEAD_FRAME_FINISH" Type="nvarchar2" MaxLength="50" />
+          <Property Name="LEAD_FRAME_TYPE" Type="nvarchar2" MaxLength="30" />
+          <Property Name="LEAD_LENGTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="LEAD_PITCH" Type="number" Precision="8" Scale="4" />
+          <Property Name="LEAD_WIDTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="LENGTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="LENGTH_MM" Type="number" Precision="8" Scale="4" />
+          <Property Name="LF_LENGTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="LF_PACKAGE_GROUP" Type="nvarchar2" MaxLength="50" />
+          <Property Name="LF_TAPE_NAME" Type="nvarchar2" MaxLength="100" />
+          <Property Name="LF_WIDTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="LID_HEIGHT" Type="number" Precision="8" Scale="4" />
+          <Property Name="LID_LENGTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="LID_WIDTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="LIFE_EXTENSION_DAY" Type="number" Precision="3" Scale="0" />
+          <Property Name="LIFE_EXTENSION_TIME" Type="number" Precision="3" Scale="0" />
+          <Property Name="LIFE_TIME" Type="number" Precision="3" Scale="0" />
+          <Property Name="LIQUIDUS_TEMP" Type="number" Precision="5" Scale="2" />
+          <Property Name="MAP_FILE_NAME" Type="nvarchar2" MaxLength="100" />
+          <Property Name="MAT_LENGTH" Type="number" Precision="5" Scale="2" />
+          <Property Name="MATCH_LEADFRAME" Type="nvarchar2" MaxLength="18" />
+          <Property Name="MATERIAL_PART" Type="nvarchar2" MaxLength="50" />
+          <Property Name="MATERIAL_SIZE" Type="nvarchar2" MaxLength="100" />
+          <Property Name="MATRIX" Type="nvarchar2" MaxLength="200" />
+          <Property Name="MATRIX_ROW" Type="nvarchar2" MaxLength="100" />
+          <Property Name="MAX_PARTICLE_SIZE" Type="number" Precision="4" Scale="2" />
+          <Property Name="MES_UNIT_PER_STRIP" Type="nvarchar2" MaxLength="30" />
+          <Property Name="MELTING_POINT" Type="nvarchar2" MaxLength="200" />
+          <Property Name="METAL_ON_SAW_STREET" Type="nvarchar2" MaxLength="50" />
+          <Property Name="METAL_ON_THICKNESS" Type="number" Precision="5" Scale="2" />
+          <Property Name="MOLD_TEMPERATURE" Type="number" Precision="3" Scale="0" />
+          <Property Name="MULTI_DIE_ID" Type="nvarchar2" MaxLength="50" />
+          <Property Name="MULTI_DIE_SIZE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="MVTR_MAX" Type="number" Precision="8" Scale="4" />
+          <Property Name="NARRATIVE" Type="nvarchar2" MaxLength="60" />
+          <Property Name="NUMBER_OF_BLOCK" Type="number" Precision="3" Scale="0" />
+          <Property Name="NUMBER_OF_HOLD" Type="number" Precision="3" Scale="0" />
+          <Property Name="NUMBER_OF_PAD" Type="number" Precision="3" Scale="0" />
+          <Property Name="NUMBER_OF_PANEL" Type="number" Precision="3" Scale="0" />
+          <Property Name="NUMBER_OF_ROW" Type="number" Precision="10" Scale="0" />
+          <Property Name="NUMBER_OF_UNIT" Type="number" Precision="10" Scale="0" />
+          <Property Name="OPERATION_USED" Type="nvarchar2" MaxLength="100" />
+          <Property Name="OS_MAT_LENGTH" Type="number" Precision="6" Scale="2" />
+          <Property Name="OTHER_CHEMICAL" Type="nvarchar2" MaxLength="100" />
+          <Property Name="OUT_SIDE_DIMENSION" Type="number" Precision="8" Scale="4" />
+          <Property Name="OUTSIDE_RADIAN" Type="number" Precision="5" Scale="2" />
+          <Property Name="PACK_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="PACKAGE_BODY_LENGHT" Type="number" Precision="8" Scale="4" />
+          <Property Name="PACKAGE_BODY_SIZE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="PACKAGE_BODY_WIDTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="PACKAGE_DIMENSION" Type="nvarchar2" MaxLength="100" />
+          <Property Name="PACKAGE_GROUP" Type="nvarchar2" MaxLength="50" />
+          <Property Name="PACKAGE_LENGTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="PACKAGE_WIDTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="PACKING_TYPE" Type="nvarchar2" MaxLength="200" />
+          <Property Name="PANEL_LENGTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="PANEL_WIDTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="PANTONE_NO" Type="nvarchar2" MaxLength="200" />
+          <Property Name="PAPER_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="PARTICLE_SIZE" Type="number" Precision="8" Scale="4" />
+          <Property Name="PASSIVATION_THK" Type="number" Precision="8" Scale="4" />
+          <Property Name="PASSIVATION_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="PCF_PERCENT" Type="number" Precision="4" Scale="2" />
+          <Property Name="PH" Type="number" Precision="4" Scale="2" />
+          <Property Name="PIN_HOLE" Type="number" Precision="3" Scale="0" />
+          <Property Name="PIN1_LOCATION" Type="nvarchar2" MaxLength="50" />
+          <Property Name="PITCH" Type="number" Precision="4" Scale="2" />
+          <Property Name="PLATING" Type="nvarchar2" MaxLength="100" />
+          <Property Name="PLATING_MATERIALS" Type="nvarchar2" MaxLength="200" />
+          <Property Name="PLATING_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="PLATING_AREA" Type="number" Precision="12" Scale="4" />
+          <Property Name="PLATING_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="PLUG_PIN_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="PLUG_PIN_LENGTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="PLUG_PIN_MATERIAL" Type="nvarchar2" MaxLength="50" />
+          <Property Name="PLUG_PIN_WIDTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="POA_OR_CUP" Type="nvarchar2" MaxLength="50" />
+          <Property Name="POCKET_DIMENSION_A0" Type="number" Precision="4" Scale="2" />
+          <Property Name="POCKET_DIMENSION_B0" Type="number" Precision="4" Scale="2" />
+          <Property Name="POCKET_DIMENSION_F" Type="number" Precision="4" Scale="2" />
+          <Property Name="POCKET_DIMENSION_K0" Type="number" Precision="4" Scale="2" />
+          <Property Name="POCKET_DIMENSION_K1" Type="number" Precision="4" Scale="2" />
+          <Property Name="POCKET_DIMENSION_P1" Type="number" Precision="4" Scale="2" />
+          <Property Name="POCKET_PITCH_X" Type="number" Precision="4" Scale="2" />
+          <Property Name="POCKET_PITCH_Y" Type="number" Precision="4" Scale="2" />
+          <Property Name="POWDER_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="POWER_RATING" Type="number" Precision="8" Scale="4" />
+          <Property Name="PRE_PREG" Type="nvarchar2" MaxLength="200" />
+          <Property Name="PRINTING" Type="nvarchar2" MaxLength="100" />
+          <Property Name="PRINTING_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="PRINTING_INFORMATION" Type="nvarchar2" MaxLength="100" />
+          <Property Name="PRINTING_POSITION" Type="nvarchar2" MaxLength="50" />
+          <Property Name="PRODUCT_APPLICATION" Type="nvarchar2" MaxLength="100" />
+          <Property Name="PRODUCT_NAME" Type="nvarchar2" MaxLength="100" />
+          <Property Name="PUCH" Type="nvarchar2" MaxLength="200" />
+          <Property Name="PURPOSE_OF_USE" Type="nvarchar2" MaxLength="100" />
+          <Property Name="QTY_POCKET" Type="number" Precision="4" Scale="0" />
+          <Property Name="QUANTITY_PER_ROLL" Type="number" Precision="6" Scale="2" />
+          <Property Name="QUANTITY_PER_SHEET" Type="number" Precision="6" Scale="2" />
+          <Property Name="RATE_CURRENT" Type="number" Precision="8" Scale="4" />
+          <Property Name="RATE_VOLTAGE" Type="number" Precision="8" Scale="4" />
+          <Property Name="RAW_MAT_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="RAW_MATERIAL" Type="nvarchar2" MaxLength="500" />
+          <Property Name="RDS" Type="number" Precision="6" Scale="2" />
+          <Property Name="RECTAN_BUMP_HEIGHT" Type="number" Precision="5" Scale="2" />
+          <Property Name="RECTAN_BUMP_PITCH" Type="number" Precision="5" Scale="2" />
+          <Property Name="RECTANGULAR_BUMP" Type="nvarchar2" MaxLength="50" />
+          <Property Name="REEL_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="REEL_DIAMETER" Type="number" Precision="6" Scale="2" />
+          <Property Name="REEL_MATERIAL" Type="nvarchar2" MaxLength="50" />
+          <Property Name="REEL_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="RESISTANCE" Type="number" Precision="8" Scale="4" />
+          <Property Name="RING_SIZE" Type="number" Precision="6" Scale="2" />
+          <Property Name="ROLL_LENGTH" Type="number" Precision="3" Scale="0" />
+          <Property Name="ROLL_LENGTH_MM" Type="number" Precision="6" Scale="2" />
+          <Property Name="ROLL_SIZE_DIAMETER" Type="number" Precision="6" Scale="2" />
+          <Property Name="ROLL_SIZE_DIMENSION" Type="number" Precision="6" Scale="2" />
+          <Property Name="ROLL_SIZE_ID" Type="number" Precision="6" Scale="2" />
+          <Property Name="ROLL_SIZE_OD" Type="number" Precision="6" Scale="2" />
+          <Property Name="ROLL_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="ROUGHNESS" Type="nvarchar2" MaxLength="200" />
+          <Property Name="ROW_PER_BLOCK" Type="number" Precision="3" Scale="0" />
+          <Property Name="ROW_PER_PANEL" Type="number" Precision="3" Scale="0" />
+          <Property Name="RUBBERTIP_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="SAW_STREET_X" Type="number" Precision="8" Scale="2" />
+          <Property Name="SAW_STREET_Y" Type="number" Precision="8" Scale="2" />
+          <Property Name="SAW_WIDTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="SEAL_RING" Type="nvarchar2" MaxLength="50" />
+          <Property Name="SEAM_WIDTH" Type="number" Precision="5" Scale="2" />
+          <Property Name="SFS_APPLICATION" Type="nvarchar2" MaxLength="50" />
+          <Property Name="SHAMFER_DIAMETER" Type="number" Precision="8" Scale="4" />
+          <Property Name="SHAPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="SHEET_ROLL" Type="number" Precision="3" Scale="0" />
+          <Property Name="SHIPPING_FORM" Type="nvarchar2" MaxLength="100" />
+          <Property Name="SILICON_TECHNOLOGY" Type="nvarchar2" MaxLength="50" />
+          <Property Name="SIZE_LENGTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="SIZE_MM" Type="number" Precision="8" Scale="4" />
+          <Property Name="SIZE_WIDTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="SIZE_X" Type="number" Precision="8" Scale="4" />
+          <Property Name="SIZE_Y" Type="number" Precision="8" Scale="4" />
+          <Property Name="SLP_APPLICATION" Type="nvarchar2" MaxLength="50" />
+          <Property Name="SOLDER_BALL_PAD_FINISH" Type="nvarchar2" MaxLength="200" />
+          <Property Name="SOLDER_BALL_PAD_PITCH" Type="number" Precision="4" Scale="2" />
+          <Property Name="SOLDER_COMPOSITION" Type="nvarchar2" MaxLength="50" />
+          <Property Name="SOLDER_MASK" Type="nvarchar2" MaxLength="200" />
+          <Property Name="SOLDER_PASTE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="SOLDER_TIP_THICKNESS" Type="number" Precision="5" Scale="2" />
+          <Property Name="SOLIDUS_TEMPERATURE" Type="number" Precision="3" Scale="0" />
+          <Property Name="SPECIFIC_GRAVITY" Type="number" Precision="5" Scale="2" />
+          <Property Name="SPIRAL_FLOW" Type="number" Precision="6" Scale="2" />
+          <Property Name="SPROCKET_HOLES" Type="nvarchar2" MaxLength="50" />
+          <Property Name="STAGGERED_PAD" Type="nvarchar2" MaxLength="50" />
+          <Property Name="STICKY_FILM_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="STORAGE_CONDITION" Type="nvarchar2" MaxLength="50" />
+          <Property Name="STORAGE_TEMPERATURE" Type="number" Precision="3" Scale="0" />
+          <Property Name="SUBSTRATE_LENGTH" Type="number" Precision="5" Scale="2" />
+          <Property Name="SUBSTRATE_PROCESS" Type="nvarchar2" MaxLength="200" />
+          <Property Name="SUBSTRATE_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="SUBSTRATE_WIDTH" Type="number" Precision="5" Scale="2" />
+          <Property Name="SUPPLIER_SITE" Type="nvarchar2" MaxLength="100" />
+          <Property Name="SUPPLIER_TAPE" Type="nvarchar2" MaxLength="200" />
+          <Property Name="SURFACE_FILM" Type="nvarchar2" MaxLength="50" />
+          <Property Name="TAIKO_LOWER_RING_THK" Type="number" Precision="8" Scale="4" />
+          <Property Name="TAIKO_LOWER_RING_WITH" Type="number" Precision="8" Scale="4" />
+          <Property Name="TAIKO_RING_TO_WAFER_GAP" Type="nvarchar2" MaxLength="100" />
+          <Property Name="TAIKO_UPPER_RING_WIDTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="TAIKO_WAFER_EDGE" Type="number" Precision="8" Scale="4" />
+          <Property Name="TAIKO_WAFER_EDGE_ACTIVE" Type="number" Precision="8" Scale="4" />
+          <Property Name="TAIKO_WAFER_SIZE" Type="number" Precision="10" Scale="0" />
+          <Property Name="TAIL_LENGTH" Type="number" Precision="6" Scale="2" />
+          <Property Name="TAPE_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="TAPE_MATERIAL" Type="nvarchar2" MaxLength="50" />
+          <Property Name="TAPE_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="TAPE_WIDTH" Type="number" Precision="5" Scale="2" />
+          <Property Name="TENSILE_STRENGTH" Type="number" Precision="5" Scale="2" />
+          <Property Name="TG" Type="number" Precision="4" Scale="2" />
+          <Property Name="THAWING_TIME" Type="number" Precision="3" Scale="0" />
+          <Property Name="THERMAL_CONDUCTIVITY" Type="number" Precision="5" Scale="2" />
+          <Property Name="THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="TIE_BAR_DESIGN" Type="nvarchar2" MaxLength="50" />
+          <Property Name="TIP_DIAMETER" Type="number" Precision="5" Scale="2" />
+          <Property Name="TIP_FINISH" Type="nvarchar2" MaxLength="50" />
+          <Property Name="TIP_FINISH_TYPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="TOLERANCE" Type="number" Precision="8" Scale="4" />
+          <Property Name="TOP_METAL_LAYER_THK" Type="number" Precision="5" Scale="2" />
+          <Property Name="TOP_PLATING" Type="nvarchar2" MaxLength="200" />
+          <Property Name="TOP_POCKET_PITCH" Type="number" Precision="8" Scale="4" />
+          <Property Name="TOTAL_CIRCULAR_BUMP" Type="number" Precision="3" Scale="0" />
+          <Property Name="TOTAL_RECTAN_BUMP" Type="number" Precision="3" Scale="0" />
+          <Property Name="TOTAL_SOLDER_BUMP" Type="number" Precision="3" Scale="0" />
+          <Property Name="TOTAL_THICKNESS" Type="number" Precision="5" Scale="2" />
+          <Property Name="TRACE_PITCH" Type="number" Precision="4" Scale="2" />
+          <Property Name="TRACE_SPACE" Type="number" Precision="8" Scale="4" />
+          <Property Name="TRACE_WIDTH" Type="number" Precision="8" Scale="4" />
+          <Property Name="TRAN_TEMP_IN" Type="nvarchar2" MaxLength="50" />
+          <Property Name="TRAY_CLIP_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="TRAY_CLIPS" Type="nvarchar2" MaxLength="50" />
+          <Property Name="TRAY_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="TRAY_LEFT" Type="nvarchar2" MaxLength="100" />
+          <Property Name="TRAY_LENGTH" Type="number" Precision="5" Scale="2" />
+          <Property Name="TRAY_MATERIAL" Type="nvarchar2" MaxLength="50" />
+          <Property Name="TRAY_PRINTING" Type="nvarchar2" MaxLength="100" />
+          <Property Name="TRAY_RIGHT" Type="nvarchar2" MaxLength="100" />
+          <Property Name="TRAY_TEMP_MAX" Type="number" Precision="3" Scale="0" />
+          <Property Name="TRAY_WIDTH" Type="number" Precision="5" Scale="2" />
+          <Property Name="TUBE_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="TUBE_LENGTH" Type="number" Precision="5" Scale="2" />
+          <Property Name="TUBE_MATERIAL" Type="nvarchar2" MaxLength="50" />
+          <Property Name="TUBE_THICKNESS" Type="number" Precision="8" Scale="4" />
+          <Property Name="TUBE_WIDTH_INNER" Type="number" Precision="5" Scale="2" />
+          <Property Name="TUBE_WIDTH_OUTER" Type="number" Precision="5" Scale="2" />
+          <Property Name="TYPE_HUB" Type="nvarchar2" MaxLength="200" />
+          <Property Name="TYPICAL_ACID" Type="number" Precision="5" Scale="2" />
+          <Property Name="UN_NO" Type="nvarchar2" MaxLength="100" />
+          <Property Name="UNIT_OF_LEAD_COUNT" Type="nvarchar2" MaxLength="3" />
+          <Property Name="UNIT_PER_COL" Type="number" Precision="5" Scale="0" />
+          <Property Name="UNIT_PER_ROW" Type="number" Precision="5" Scale="0" />
+          <Property Name="UNIT_PER_STRIP" Type="number" Precision="6" Scale="0" />
+          <Property Name="UNIT_PER_TRAY" Type="number" Precision="4" Scale="0" />
+          <Property Name="UNIT_PER_TUBE" Type="number" Precision="4" Scale="0" />
+          <Property Name="UNIT_PER_WAFER" Type="number" Precision="10" Scale="0" />
+          <Property Name="USAGE_ONE_CYCLE" Type="number" Precision="12" Scale="2" />
+          <Property Name="UV_TAPE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="VACCUM_SPOOL" Type="nvarchar2" MaxLength="50" />
+          <Property Name="VIA_LAND" Type="number" Precision="8" Scale="4" />
+          <Property Name="VIA_ON_PAD" Type="nvarchar2" MaxLength="200" />
+          <Property Name="VIA_PLUG_MATERIAL" Type="nvarchar2" MaxLength="200" />
+          <Property Name="VISCOSITY" Type="number" Precision="6" Scale="2" />
+          <Property Name="VISCOSITY_COND" Type="nvarchar2" MaxLength="50" />
+          <Property Name="VOLUME" Type="number" Precision="6" Scale="2" />
+          <Property Name="VOLUME_RESISTIVITY" Type="number" Precision="5" Scale="2" />
+          <Property Name="WAFER_BACKSIDE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WAFER_CONDITION" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WAFER_DIAMETER" Type="number" Precision="5" Scale="2" />
+          <Property Name="WAFER_SIZE" Type="number" Precision="9" Scale="4" />
+          <Property Name="WAFER_FAB" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WAFER_INKED" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WAFER_MAP" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WAFER_PACK_COND" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WAFER_TECHNOLOGY" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WATER_SOUBLE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WAVE_PAPER" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WEIGHT_GRAM" Type="number" Precision="5" Scale="2" />
+          <Property Name="WIDTH_MM" Type="number" Precision="8" Scale="4" />
+          <Property Name="WIRE_ALLOY_A" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WIRE_ALLOY_B" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WIRE_ALLOY_C" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WIRE_HARDNESS" Type="nvarchar2" MaxLength="200" />
+          <Property Name="WIRE_LENGTH" Type="number" Precision="4" Scale="0" />
+          <Property Name="WIRE_SPOOL_COLOR" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WIRE_SPOOL_IN_DIA" Type="number" Precision="5" Scale="2" />
+          <Property Name="WIRE_TYPE" Type="nvarchar2" MaxLength="200" />
+          <Property Name="X_OUT_COND" Type="nvarchar2" MaxLength="50" />
+          <Property Name="MES_MAT_GROUP" Type="nvarchar2" MaxLength="40" />
+          <Property Name="FLUX_TYPE" Type="nvarchar2" MaxLength="100" />
+          <Property Name="SOLDER_ALLOY" Type="nvarchar2" MaxLength="100" />
+          <Property Name="SOLDER_WIRE_DIAMETER" Type="number" Precision="9" Scale="4" />
+          <Property Name="WIRE_DIAMETER" Type="number" Precision="9" Scale="4" />
+          <Property Name="UTL_WIRE_TYPE" Type="nvarchar2" MaxLength="100" />
+          <Property Name="MANUFACTURER_WIRE_TYPE" Type="nvarchar2" MaxLength="100" />
+          <Property Name="COMPOUND_GROUP" Type="nvarchar2" MaxLength="100" />
+          <Property Name="PELLET_DIAMETER" Type="nvarchar2" MaxLength="100" />
+          <Property Name="PELLET_WEIGHT" Type="nvarchar2" MaxLength="100" />
+          <Property Name="COMPONENT_PART_NUMBER" Type="nvarchar2" MaxLength="100" />
+          <Property Name="STATUS" Type="number" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="STATUS_NAME" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CREATED_BY" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CREATED_BY_NAME" Type="nvarchar2" MaxLength="500" Nullable="false" />
+          <Property Name="CREATED_DATE" Type="date" Nullable="false" />
+          <Property Name="UPDATED_BY" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="UPDATED_BY_NAME" Type="nvarchar2" MaxLength="500" Nullable="false" />
+          <Property Name="UPDATED_DATE" Type="date" Nullable="false" />
+          <Property Name="FAB_CORE" Type="nvarchar2" MaxLength="20" />
+          <Property Name="FAB_PROCESS" Type="nvarchar2" MaxLength="50" />
+          <Property Name="WAFER_TOPCOAT" Type="nvarchar2" MaxLength="100" />
+          <Property Name="TAIKO_RING_TO_WAFER_GAP_NO" Type="number" Precision="8" Scale="4" />
+          <Property Name="WAFER_NOTCH" Type="nvarchar2" MaxLength="50" />
+          <Property Name="DIMENSION_A1" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A2" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A3" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A4" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A5" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A6" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A7" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A8" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A9" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B1" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B2" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B3" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B4" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B5" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B6" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B7" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B8" Type="number" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B9" Type="number" Precision="8" Scale="4" />
+        </EntityType>
+        <EntityContainer Name="Model2StoreContainer">
+          <EntitySet Name="MAS_MATERIAL_MASTER" EntityType="Self.MAS_MATERIAL_MASTER" Schema="CMDDBA" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MAS_MATERIAL_MASTER">
+          <Key>
+            <PropertyRef Name="MATERIAL_NO" />
+          </Key>
+          <Property Name="MATERIAL_NO" Type="String" MaxLength="18" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UNIQUE_ID" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="LIFE_CYCLE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="K2_REQUEST_NO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LONG_DESCRIPTION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DESCRIPTION1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DESCRIPTION2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MAT_DESCRIPTION_TH" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="RAW_MAT_DESC_TH" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ENGINEERING_CODE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FORMULA_USAGE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UOM_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BASE_UOM" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CONVERT_UOM" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="IQC" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="CUST_CODE" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="SIZE_CODE" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="FIRST_REVISION" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="SPECIAL_INSTRUCTION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="REMARK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MATERIAL_TYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ORIGIN_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GROUP_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CATEGORY_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UTL_DRAWING_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="UTL_DRAWING_REV" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UTL_QUALIFICATION" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="SHELF_LIFE" Type="Int16" Nullable="false" />
+          <Property Name="MIN_SHELF_LIFE" Type="Int16" Nullable="false" />
+          <Property Name="FLOOR_LIFE_DAY" Type="Int16" />
+          <Property Name="FLOOR_LIFE_HR" Type="Int16" />
+          <Property Name="EXTEND_SHELF_LIFE" Type="Int16" />
+          <Property Name="CONSIGNMENT_FLAG" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="REQUESTER_EN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="REQUESTER_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="REQUESTER_DEPT" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="REQUESTER_EXT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="REQUEST_JUSTIFICATION" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LAST_APPROVE_EN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LAST_APPROVE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ADHESIVE_MATERIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ADHESIVE_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="ADHESIVE_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AGING_TEMP" Type="Byte" />
+          <Property Name="AGING_TIME" Type="Byte" />
+          <Property Name="ALLOW_X_OUT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ALLOWANCE" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="ALLOY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="APPLICATION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BAG_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="BAG_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BAKE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BASE_FILM_THK" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="BASE_MATERIAL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BATH_LIFE" Type="Decimal" Precision="7" Scale="2" />
+          <Property Name="BLADE_LIFE" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="BOND_FINGER_FINISH" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BOND_FINGER_PITCH" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="BOND_PAD_LAYER_STACK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BONDING_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BOTTLE_NECK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BOTTOM_PLATING" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BOX_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BOX_HEIGHT" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="BOX_LAYER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BOX_STYLE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BPO_UM" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="BPP_UM" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="BTM_POCKET_PITCH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="BUBBLE_SHEET" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BUBBLE_SIZE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BUILD_UP" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BUILD_UP_MATERIAL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BUMP_COMPOSITION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BUMP_DIAMETER" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="BUMP_DIAMETER_X" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="BUMP_DIAMETER_Y" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="BUMP_PAD_FINISH" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BUMP_PITCH" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="BUMP_PLACEMENT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BURSTING_STRENGTH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BUSS_FLAG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CAN_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CAN_DIAMETER" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="CAN_LENGTH" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="CAN_MATERIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CAN_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="CAP_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CAP_DIAMETER" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="CAP_LENGTH" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="CAP_MATERIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CAP_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="CAPACITANCE" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="CARRIER_TAPE_WIDTH" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="CC_SYR" Type="Byte" />
+          <Property Name="CHEMICAL_CLASS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CHEMICAL_PROCESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CHEMICAL_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CHEMISTRY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CIRCULAR_BUMP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CIRCULAR_BUMP_HEIGHT" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="CIRCULAR_BUMP_PITCH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="CLIP_PACKING" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CLIP_QTY" Type="Int32" />
+          <Property Name="CLIP_WIDTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="COL_PER_BLOCK" Type="Int32" />
+          <Property Name="COL_PER_PANEL" Type="Byte" />
+          <Property Name="COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSITION" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSITION_TYPE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOUND_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CONDITION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CONNECTED_AREA" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="CONTAINER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CORE_MATERIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CORE_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="CORE_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CORE_WIDTH" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="CORNER_RELIEF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="COVER_TAPE_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="COVER_TAPE_WIDTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="CRYSTAL_TEMP" Type="Byte" />
+          <Property Name="CTE_ABOVE_TG" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="CTE_BELOW_TG" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="CU_BONDING_APP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CU_CLIP_REEL_SIZE" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="CU_POST_STRUCTURE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CU_POST_THICKNESS" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="CURE_TEMPERATURE" Type="Byte" />
+          <Property Name="CURE_TIME" Type="Byte" />
+          <Property Name="CURVE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CUSHION_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CUSHION_LENGTH" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="CUSHION_MATERIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CUSHION_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="CUSHION_WIDTH" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="DAF_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DAP_HOR" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DAP_LF_HOR" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DAP_LF_VER" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DAP_VER" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DENSITY" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DESICCANT_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DESICCANT_UNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DIAMENSION_W1" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="DIAMENSION_W2" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="DIAMENSION_W3" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="DIAMETER_MM" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="DIAMETER_UM" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="DIAMOND_GRIT" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="DICING_TAPE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DICING_TAPE_BASE_FILM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DICING_TAPE_PART" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DICING_TAPE_SUPPLIER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DICING_TAPE_UV_COND" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DIE_BACK_FINISHING" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DIE_FINAL_THICKNESS" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="DIE_FRONT_FINISHING" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DIE_ID" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="DIE_INTIAL_THICKNESS" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="DIE_PHYSICAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DIE_REVISION" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="DIE_SHELF" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="DIE_SIZE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DIE_SIZE_X" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="DIE_SIZE_Y" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="DIE_SPEC" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="DIE_SUPPLIER_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DIMENSION_A" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_C" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_D" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_E" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_F" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_G" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_H" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_I" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_J" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_K" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_L" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_M" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_MM" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="DIMENSION_N" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_O" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_P" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_Q" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_R" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_S" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_T" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_U" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_V" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_W" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_X" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_Y" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_Z" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMPLE_DESIGN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOWN_SET_DEPTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="EIA_SIZE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ELASTIC" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ELECTRICAL_RESIS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ELONGATION" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="EPOXY_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ESD_OR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EXPOSE_PAD_HOR" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="EXPOSE_PAD_VER" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="EXPOSURE_MAX" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="EXPOSURE_MIN" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="EXPOSURE_THICKNESS" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="FACE_ANGLE" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="FC_PAD_FINISH" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="FILLER_SIZE_AVG" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="FILLER_SIZE_MAX" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="FILLER_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FIRST_POCKET_X" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="FIRST_POCKET_Y" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="FLAG_BUSS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FLAG_NO_TAPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FLUX_CLASSIFICATION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FORMAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GAP_BETWEEN_BOAC" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="GAS_COMPOSITION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GEL_COAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GEL_TIME" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="GLUE_THICKNESS" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="GLUE_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GOLD_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="GRIT_CONCENTRATION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GROUND_WIRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HALOGEN_FREE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HALOGEN_FREE_FLGAG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HARD_AU" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="HEIGHT" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="HIC_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HIC_DOT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HIC_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HOLE_DIAMETER" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="HUB_DIAMETER" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="IN_SIDE_DIMENSION" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="INDUCTANCE" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="INK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INK_TYPE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="INNER_SHAMFER" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="IS_OPERATING_SUPPLY" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LABEL_ADHESIVE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LABEL_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LABEL_CORNER" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="LABEL_GAP" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="LABEL_HEIGHT" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="LABEL_PRINT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LABEL_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="LABEL_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LABEL_WIDTH" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="LAYER_COUNT" Type="Byte" />
+          <Property Name="LEAD_COUNT" Type="Int32" />
+          <Property Name="LEAD_COUNT_IO" Type="Byte" />
+          <Property Name="LEAD_FRAME_FINISH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LEAD_FRAME_TYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="LEAD_LENGTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="LEAD_PITCH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="LEAD_WIDTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="LENGTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="LENGTH_MM" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="LF_LENGTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="LF_PACKAGE_GROUP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LF_TAPE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LF_WIDTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="LID_HEIGHT" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="LID_LENGTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="LID_WIDTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="LIFE_EXTENSION_DAY" Type="Byte" />
+          <Property Name="LIFE_EXTENSION_TIME" Type="Byte" />
+          <Property Name="LIFE_TIME" Type="Byte" />
+          <Property Name="LIQUIDUS_TEMP" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MAP_FILE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MAT_LENGTH" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MATCH_LEADFRAME" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Name="MATERIAL_PART" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MATERIAL_SIZE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MATRIX" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="MATRIX_ROW" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MAX_PARTICLE_SIZE" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="MES_UNIT_PER_STRIP" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="MELTING_POINT" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="METAL_ON_SAW_STREET" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="METAL_ON_THICKNESS" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MOLD_TEMPERATURE" Type="Byte" />
+          <Property Name="MULTI_DIE_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MULTI_DIE_SIZE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MVTR_MAX" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="NARRATIVE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="NUMBER_OF_BLOCK" Type="Byte" />
+          <Property Name="NUMBER_OF_HOLD" Type="Byte" />
+          <Property Name="NUMBER_OF_PAD" Type="Byte" />
+          <Property Name="NUMBER_OF_PANEL" Type="Byte" />
+          <Property Name="NUMBER_OF_ROW" Type="Int32" />
+          <Property Name="NUMBER_OF_UNIT" Type="Int32" />
+          <Property Name="OPERATION_USED" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OS_MAT_LENGTH" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="OTHER_CHEMICAL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OUT_SIDE_DIMENSION" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="OUTSIDE_RADIAN" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="PACK_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PACKAGE_BODY_LENGHT" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PACKAGE_BODY_SIZE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PACKAGE_BODY_WIDTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PACKAGE_DIMENSION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PACKAGE_GROUP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PACKAGE_LENGTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PACKAGE_WIDTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PACKING_TYPE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PANEL_LENGTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PANEL_WIDTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PANTONE_NO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PAPER_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PARTICLE_SIZE" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PASSIVATION_THK" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PASSIVATION_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PCF_PERCENT" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="PH" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="PIN_HOLE" Type="Byte" />
+          <Property Name="PIN1_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PITCH" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="PLATING" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PLATING_MATERIALS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PLATING_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PLATING_AREA" Type="Decimal" Precision="12" Scale="4" />
+          <Property Name="PLATING_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PLUG_PIN_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PLUG_PIN_LENGTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PLUG_PIN_MATERIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PLUG_PIN_WIDTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="POA_OR_CUP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="POCKET_DIMENSION_A0" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="POCKET_DIMENSION_B0" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="POCKET_DIMENSION_F" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="POCKET_DIMENSION_K0" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="POCKET_DIMENSION_K1" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="POCKET_DIMENSION_P1" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="POCKET_PITCH_X" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="POCKET_PITCH_Y" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="POWDER_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="POWER_RATING" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PRE_PREG" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PRINTING" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PRINTING_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRINTING_INFORMATION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PRINTING_POSITION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRODUCT_APPLICATION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PRODUCT_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PUCH" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PURPOSE_OF_USE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="QTY_POCKET" Type="Int16" />
+          <Property Name="QUANTITY_PER_ROLL" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="QUANTITY_PER_SHEET" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="RATE_CURRENT" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="RATE_VOLTAGE" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="RAW_MAT_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RAW_MATERIAL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RDS" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="RECTAN_BUMP_HEIGHT" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="RECTAN_BUMP_PITCH" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="RECTANGULAR_BUMP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="REEL_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="REEL_DIAMETER" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="REEL_MATERIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="REEL_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RESISTANCE" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="RING_SIZE" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="ROLL_LENGTH" Type="Byte" />
+          <Property Name="ROLL_LENGTH_MM" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="ROLL_SIZE_DIAMETER" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="ROLL_SIZE_DIMENSION" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="ROLL_SIZE_ID" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="ROLL_SIZE_OD" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="ROLL_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ROUGHNESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ROW_PER_BLOCK" Type="Byte" />
+          <Property Name="ROW_PER_PANEL" Type="Byte" />
+          <Property Name="RUBBERTIP_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SAW_STREET_X" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="SAW_STREET_Y" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="SAW_WIDTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="SEAL_RING" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SEAM_WIDTH" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="SFS_APPLICATION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SHAMFER_DIAMETER" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="SHAPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SHEET_ROLL" Type="Byte" />
+          <Property Name="SHIPPING_FORM" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SILICON_TECHNOLOGY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SIZE_LENGTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="SIZE_MM" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="SIZE_WIDTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="SIZE_X" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="SIZE_Y" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="SLP_APPLICATION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SOLDER_BALL_PAD_FINISH" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SOLDER_BALL_PAD_PITCH" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="SOLDER_COMPOSITION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SOLDER_MASK" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SOLDER_PASTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SOLDER_TIP_THICKNESS" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="SOLIDUS_TEMPERATURE" Type="Byte" />
+          <Property Name="SPECIFIC_GRAVITY" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="SPIRAL_FLOW" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="SPROCKET_HOLES" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STAGGERED_PAD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STICKY_FILM_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="STORAGE_CONDITION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STORAGE_TEMPERATURE" Type="Byte" />
+          <Property Name="SUBSTRATE_LENGTH" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="SUBSTRATE_PROCESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SUBSTRATE_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="SUBSTRATE_WIDTH" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="SUPPLIER_SITE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SUPPLIER_TAPE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SURFACE_FILM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TAIKO_LOWER_RING_THK" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="TAIKO_LOWER_RING_WITH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="TAIKO_RING_TO_WAFER_GAP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TAIKO_UPPER_RING_WIDTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="TAIKO_WAFER_EDGE" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="TAIKO_WAFER_EDGE_ACTIVE" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="TAIKO_WAFER_SIZE" Type="Int32" />
+          <Property Name="TAIL_LENGTH" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="TAPE_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TAPE_MATERIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TAPE_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="TAPE_WIDTH" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TENSILE_STRENGTH" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TG" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="THAWING_TIME" Type="Byte" />
+          <Property Name="THERMAL_CONDUCTIVITY" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="TIE_BAR_DESIGN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TIP_DIAMETER" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TIP_FINISH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TIP_FINISH_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TOLERANCE" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="TOP_METAL_LAYER_THK" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TOP_PLATING" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TOP_POCKET_PITCH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="TOTAL_CIRCULAR_BUMP" Type="Byte" />
+          <Property Name="TOTAL_RECTAN_BUMP" Type="Byte" />
+          <Property Name="TOTAL_SOLDER_BUMP" Type="Byte" />
+          <Property Name="TOTAL_THICKNESS" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TRACE_PITCH" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="TRACE_SPACE" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="TRACE_WIDTH" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="TRAN_TEMP_IN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TRAY_CLIP_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TRAY_CLIPS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TRAY_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TRAY_LEFT" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TRAY_LENGTH" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TRAY_MATERIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TRAY_PRINTING" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TRAY_RIGHT" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TRAY_TEMP_MAX" Type="Byte" />
+          <Property Name="TRAY_WIDTH" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TUBE_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TUBE_LENGTH" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TUBE_MATERIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TUBE_THICKNESS" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="TUBE_WIDTH_INNER" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TUBE_WIDTH_OUTER" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TYPE_HUB" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TYPICAL_ACID" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="UN_NO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UNIT_OF_LEAD_COUNT" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="UNIT_PER_COL" Type="Int16" />
+          <Property Name="UNIT_PER_ROW" Type="Int16" />
+          <Property Name="UNIT_PER_STRIP" Type="Int32" />
+          <Property Name="UNIT_PER_TRAY" Type="Int16" />
+          <Property Name="UNIT_PER_TUBE" Type="Int16" />
+          <Property Name="UNIT_PER_WAFER" Type="Int32" />
+          <Property Name="USAGE_ONE_CYCLE" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="UV_TAPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VACCUM_SPOOL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VIA_LAND" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="VIA_ON_PAD" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="VIA_PLUG_MATERIAL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="VISCOSITY" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="VISCOSITY_COND" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VOLUME" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="VOLUME_RESISTIVITY" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="WAFER_BACKSIDE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WAFER_CONDITION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WAFER_DIAMETER" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="WAFER_SIZE" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="WAFER_FAB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WAFER_INKED" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WAFER_MAP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WAFER_PACK_COND" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WAFER_TECHNOLOGY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WATER_SOUBLE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WAVE_PAPER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WEIGHT_GRAM" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="WIDTH_MM" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="WIRE_ALLOY_A" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WIRE_ALLOY_B" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WIRE_ALLOY_C" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WIRE_HARDNESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="WIRE_LENGTH" Type="Int16" />
+          <Property Name="WIRE_SPOOL_COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WIRE_SPOOL_IN_DIA" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="WIRE_TYPE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="X_OUT_COND" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MES_MAT_GROUP" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="FLUX_TYPE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SOLDER_ALLOY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SOLDER_WIRE_DIAMETER" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="WIRE_DIAMETER" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="UTL_WIRE_TYPE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MANUFACTURER_WIRE_TYPE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOUND_GROUP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PELLET_DIAMETER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PELLET_WEIGHT" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COMPONENT_PART_NUMBER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Byte" Nullable="false" />
+          <Property Name="STATUS_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CREATED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CREATED_BY_NAME" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CREATED_DATE" Type="DateTime" Nullable="false" />
+          <Property Name="UPDATED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UPDATED_BY_NAME" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UPDATED_DATE" Type="DateTime" Nullable="false" />
+          <Property Name="FAB_CORE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FAB_PROCESS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WAFER_TOPCOAT" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TAIKO_RING_TO_WAFER_GAP_NO" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="WAFER_NOTCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DIMENSION_A1" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A2" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A3" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A4" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A5" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A6" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A7" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A8" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_A9" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B1" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B2" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B3" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B4" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B5" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B6" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B7" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B8" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DIMENSION_B9" Type="Decimal" Precision="8" Scale="4" />
+        </EntityType>
+        <EntityContainer Name="Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MAS_MATERIAL_MASTER" EntityType="Self.MAS_MATERIAL_MASTER" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Model2StoreContainer" CdmEntityContainer="Entities1">
+          <EntitySetMapping Name="MAS_MATERIAL_MASTER">
+            <EntityTypeMapping TypeName="Model2.MAS_MATERIAL_MASTER">
+              <MappingFragment StoreEntitySet="MAS_MATERIAL_MASTER">
+                <ScalarProperty Name="MATERIAL_NO" ColumnName="MATERIAL_NO" />
+                <ScalarProperty Name="UNIQUE_ID" ColumnName="UNIQUE_ID" />
+                <ScalarProperty Name="LIFE_CYCLE" ColumnName="LIFE_CYCLE" />
+                <ScalarProperty Name="K2_REQUEST_NO" ColumnName="K2_REQUEST_NO" />
+                <ScalarProperty Name="LONG_DESCRIPTION" ColumnName="LONG_DESCRIPTION" />
+                <ScalarProperty Name="DESCRIPTION1" ColumnName="DESCRIPTION1" />
+                <ScalarProperty Name="DESCRIPTION2" ColumnName="DESCRIPTION2" />
+                <ScalarProperty Name="MAT_DESCRIPTION_TH" ColumnName="MAT_DESCRIPTION_TH" />
+                <ScalarProperty Name="RAW_MAT_DESC_TH" ColumnName="RAW_MAT_DESC_TH" />
+                <ScalarProperty Name="ENGINEERING_CODE" ColumnName="ENGINEERING_CODE" />
+                <ScalarProperty Name="FORMULA_USAGE" ColumnName="FORMULA_USAGE" />
+                <ScalarProperty Name="UOM_CODE" ColumnName="UOM_CODE" />
+                <ScalarProperty Name="BASE_UOM" ColumnName="BASE_UOM" />
+                <ScalarProperty Name="CONVERT_UOM" ColumnName="CONVERT_UOM" />
+                <ScalarProperty Name="IQC" ColumnName="IQC" />
+                <ScalarProperty Name="CUST_CODE" ColumnName="CUST_CODE" />
+                <ScalarProperty Name="SIZE_CODE" ColumnName="SIZE_CODE" />
+                <ScalarProperty Name="FIRST_REVISION" ColumnName="FIRST_REVISION" />
+                <ScalarProperty Name="SPECIAL_INSTRUCTION" ColumnName="SPECIAL_INSTRUCTION" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="MATERIAL_TYPE" ColumnName="MATERIAL_TYPE" />
+                <ScalarProperty Name="ORIGIN_CODE" ColumnName="ORIGIN_CODE" />
+                <ScalarProperty Name="GROUP_CODE" ColumnName="GROUP_CODE" />
+                <ScalarProperty Name="CATEGORY_CODE" ColumnName="CATEGORY_CODE" />
+                <ScalarProperty Name="UTL_DRAWING_NO" ColumnName="UTL_DRAWING_NO" />
+                <ScalarProperty Name="UTL_DRAWING_REV" ColumnName="UTL_DRAWING_REV" />
+                <ScalarProperty Name="UTL_QUALIFICATION" ColumnName="UTL_QUALIFICATION" />
+                <ScalarProperty Name="SHELF_LIFE" ColumnName="SHELF_LIFE" />
+                <ScalarProperty Name="MIN_SHELF_LIFE" ColumnName="MIN_SHELF_LIFE" />
+                <ScalarProperty Name="FLOOR_LIFE_DAY" ColumnName="FLOOR_LIFE_DAY" />
+                <ScalarProperty Name="FLOOR_LIFE_HR" ColumnName="FLOOR_LIFE_HR" />
+                <ScalarProperty Name="EXTEND_SHELF_LIFE" ColumnName="EXTEND_SHELF_LIFE" />
+                <ScalarProperty Name="CONSIGNMENT_FLAG" ColumnName="CONSIGNMENT_FLAG" />
+                <ScalarProperty Name="REQUESTER_EN" ColumnName="REQUESTER_EN" />
+                <ScalarProperty Name="REQUESTER_NAME" ColumnName="REQUESTER_NAME" />
+                <ScalarProperty Name="REQUESTER_DEPT" ColumnName="REQUESTER_DEPT" />
+                <ScalarProperty Name="REQUESTER_EXT" ColumnName="REQUESTER_EXT" />
+                <ScalarProperty Name="REQUEST_JUSTIFICATION" ColumnName="REQUEST_JUSTIFICATION" />
+                <ScalarProperty Name="LAST_APPROVE_EN" ColumnName="LAST_APPROVE_EN" />
+                <ScalarProperty Name="LAST_APPROVE_NAME" ColumnName="LAST_APPROVE_NAME" />
+                <ScalarProperty Name="ADHESIVE_MATERIAL" ColumnName="ADHESIVE_MATERIAL" />
+                <ScalarProperty Name="ADHESIVE_THICKNESS" ColumnName="ADHESIVE_THICKNESS" />
+                <ScalarProperty Name="ADHESIVE_TYPE" ColumnName="ADHESIVE_TYPE" />
+                <ScalarProperty Name="AGING_TEMP" ColumnName="AGING_TEMP" />
+                <ScalarProperty Name="AGING_TIME" ColumnName="AGING_TIME" />
+                <ScalarProperty Name="ALLOW_X_OUT" ColumnName="ALLOW_X_OUT" />
+                <ScalarProperty Name="ALLOWANCE" ColumnName="ALLOWANCE" />
+                <ScalarProperty Name="ALLOY" ColumnName="ALLOY" />
+                <ScalarProperty Name="APPLICATION" ColumnName="APPLICATION" />
+                <ScalarProperty Name="BAG_THICKNESS" ColumnName="BAG_THICKNESS" />
+                <ScalarProperty Name="BAG_TYPE" ColumnName="BAG_TYPE" />
+                <ScalarProperty Name="BAKE" ColumnName="BAKE" />
+                <ScalarProperty Name="BASE_FILM_THK" ColumnName="BASE_FILM_THK" />
+                <ScalarProperty Name="BASE_MATERIAL" ColumnName="BASE_MATERIAL" />
+                <ScalarProperty Name="BATH_LIFE" ColumnName="BATH_LIFE" />
+                <ScalarProperty Name="BLADE_LIFE" ColumnName="BLADE_LIFE" />
+                <ScalarProperty Name="BOND_FINGER_FINISH" ColumnName="BOND_FINGER_FINISH" />
+                <ScalarProperty Name="BOND_FINGER_PITCH" ColumnName="BOND_FINGER_PITCH" />
+                <ScalarProperty Name="BOND_PAD_LAYER_STACK" ColumnName="BOND_PAD_LAYER_STACK" />
+                <ScalarProperty Name="BONDING_TYPE" ColumnName="BONDING_TYPE" />
+                <ScalarProperty Name="BOTTLE_NECK" ColumnName="BOTTLE_NECK" />
+                <ScalarProperty Name="BOTTOM_PLATING" ColumnName="BOTTOM_PLATING" />
+                <ScalarProperty Name="BOX_COLOR" ColumnName="BOX_COLOR" />
+                <ScalarProperty Name="BOX_HEIGHT" ColumnName="BOX_HEIGHT" />
+                <ScalarProperty Name="BOX_LAYER" ColumnName="BOX_LAYER" />
+                <ScalarProperty Name="BOX_STYLE" ColumnName="BOX_STYLE" />
+                <ScalarProperty Name="BPO_UM" ColumnName="BPO_UM" />
+                <ScalarProperty Name="BPP_UM" ColumnName="BPP_UM" />
+                <ScalarProperty Name="BTM_POCKET_PITCH" ColumnName="BTM_POCKET_PITCH" />
+                <ScalarProperty Name="BUBBLE_SHEET" ColumnName="BUBBLE_SHEET" />
+                <ScalarProperty Name="BUBBLE_SIZE" ColumnName="BUBBLE_SIZE" />
+                <ScalarProperty Name="BUILD_UP" ColumnName="BUILD_UP" />
+                <ScalarProperty Name="BUILD_UP_MATERIAL" ColumnName="BUILD_UP_MATERIAL" />
+                <ScalarProperty Name="BUMP_COMPOSITION" ColumnName="BUMP_COMPOSITION" />
+                <ScalarProperty Name="BUMP_DIAMETER" ColumnName="BUMP_DIAMETER" />
+                <ScalarProperty Name="BUMP_DIAMETER_X" ColumnName="BUMP_DIAMETER_X" />
+                <ScalarProperty Name="BUMP_DIAMETER_Y" ColumnName="BUMP_DIAMETER_Y" />
+                <ScalarProperty Name="BUMP_PAD_FINISH" ColumnName="BUMP_PAD_FINISH" />
+                <ScalarProperty Name="BUMP_PITCH" ColumnName="BUMP_PITCH" />
+                <ScalarProperty Name="BUMP_PLACEMENT" ColumnName="BUMP_PLACEMENT" />
+                <ScalarProperty Name="BURSTING_STRENGTH" ColumnName="BURSTING_STRENGTH" />
+                <ScalarProperty Name="BUSS_FLAG" ColumnName="BUSS_FLAG" />
+                <ScalarProperty Name="CAN_COLOR" ColumnName="CAN_COLOR" />
+                <ScalarProperty Name="CAN_DIAMETER" ColumnName="CAN_DIAMETER" />
+                <ScalarProperty Name="CAN_LENGTH" ColumnName="CAN_LENGTH" />
+                <ScalarProperty Name="CAN_MATERIAL" ColumnName="CAN_MATERIAL" />
+                <ScalarProperty Name="CAN_THICKNESS" ColumnName="CAN_THICKNESS" />
+                <ScalarProperty Name="CAP_COLOR" ColumnName="CAP_COLOR" />
+                <ScalarProperty Name="CAP_DIAMETER" ColumnName="CAP_DIAMETER" />
+                <ScalarProperty Name="CAP_LENGTH" ColumnName="CAP_LENGTH" />
+                <ScalarProperty Name="CAP_MATERIAL" ColumnName="CAP_MATERIAL" />
+                <ScalarProperty Name="CAP_THICKNESS" ColumnName="CAP_THICKNESS" />
+                <ScalarProperty Name="CAPACITANCE" ColumnName="CAPACITANCE" />
+                <ScalarProperty Name="CARRIER_TAPE_WIDTH" ColumnName="CARRIER_TAPE_WIDTH" />
+                <ScalarProperty Name="CC_SYR" ColumnName="CC_SYR" />
+                <ScalarProperty Name="CHEMICAL_CLASS" ColumnName="CHEMICAL_CLASS" />
+                <ScalarProperty Name="CHEMICAL_PROCESS" ColumnName="CHEMICAL_PROCESS" />
+                <ScalarProperty Name="CHEMICAL_TYPE" ColumnName="CHEMICAL_TYPE" />
+                <ScalarProperty Name="CHEMISTRY" ColumnName="CHEMISTRY" />
+                <ScalarProperty Name="CIRCULAR_BUMP" ColumnName="CIRCULAR_BUMP" />
+                <ScalarProperty Name="CIRCULAR_BUMP_HEIGHT" ColumnName="CIRCULAR_BUMP_HEIGHT" />
+                <ScalarProperty Name="CIRCULAR_BUMP_PITCH" ColumnName="CIRCULAR_BUMP_PITCH" />
+                <ScalarProperty Name="CLIP_PACKING" ColumnName="CLIP_PACKING" />
+                <ScalarProperty Name="CLIP_QTY" ColumnName="CLIP_QTY" />
+                <ScalarProperty Name="CLIP_WIDTH" ColumnName="CLIP_WIDTH" />
+                <ScalarProperty Name="COL_PER_BLOCK" ColumnName="COL_PER_BLOCK" />
+                <ScalarProperty Name="COL_PER_PANEL" ColumnName="COL_PER_PANEL" />
+                <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+                <ScalarProperty Name="COMPOSITION" ColumnName="COMPOSITION" />
+                <ScalarProperty Name="COMPOSITION_TYPE" ColumnName="COMPOSITION_TYPE" />
+                <ScalarProperty Name="COMPOUND_TYPE" ColumnName="COMPOUND_TYPE" />
+                <ScalarProperty Name="CONDITION" ColumnName="CONDITION" />
+                <ScalarProperty Name="CONNECTED_AREA" ColumnName="CONNECTED_AREA" />
+                <ScalarProperty Name="CONTAINER" ColumnName="CONTAINER" />
+                <ScalarProperty Name="CORE_MATERIAL" ColumnName="CORE_MATERIAL" />
+                <ScalarProperty Name="CORE_THICKNESS" ColumnName="CORE_THICKNESS" />
+                <ScalarProperty Name="CORE_TYPE" ColumnName="CORE_TYPE" />
+                <ScalarProperty Name="CORE_WIDTH" ColumnName="CORE_WIDTH" />
+                <ScalarProperty Name="CORNER_RELIEF" ColumnName="CORNER_RELIEF" />
+                <ScalarProperty Name="COVER_TAPE_THICKNESS" ColumnName="COVER_TAPE_THICKNESS" />
+                <ScalarProperty Name="COVER_TAPE_WIDTH" ColumnName="COVER_TAPE_WIDTH" />
+                <ScalarProperty Name="CRYSTAL_TEMP" ColumnName="CRYSTAL_TEMP" />
+                <ScalarProperty Name="CTE_ABOVE_TG" ColumnName="CTE_ABOVE_TG" />
+                <ScalarProperty Name="CTE_BELOW_TG" ColumnName="CTE_BELOW_TG" />
+                <ScalarProperty Name="CU_BONDING_APP" ColumnName="CU_BONDING_APP" />
+                <ScalarProperty Name="CU_CLIP_REEL_SIZE" ColumnName="CU_CLIP_REEL_SIZE" />
+                <ScalarProperty Name="CU_POST_STRUCTURE" ColumnName="CU_POST_STRUCTURE" />
+                <ScalarProperty Name="CU_POST_THICKNESS" ColumnName="CU_POST_THICKNESS" />
+                <ScalarProperty Name="CURE_TEMPERATURE" ColumnName="CURE_TEMPERATURE" />
+                <ScalarProperty Name="CURE_TIME" ColumnName="CURE_TIME" />
+                <ScalarProperty Name="CURVE" ColumnName="CURVE" />
+                <ScalarProperty Name="CUSHION_COLOR" ColumnName="CUSHION_COLOR" />
+                <ScalarProperty Name="CUSHION_LENGTH" ColumnName="CUSHION_LENGTH" />
+                <ScalarProperty Name="CUSHION_MATERIAL" ColumnName="CUSHION_MATERIAL" />
+                <ScalarProperty Name="CUSHION_THICKNESS" ColumnName="CUSHION_THICKNESS" />
+                <ScalarProperty Name="CUSHION_WIDTH" ColumnName="CUSHION_WIDTH" />
+                <ScalarProperty Name="DAF_TYPE" ColumnName="DAF_TYPE" />
+                <ScalarProperty Name="DAP_HOR" ColumnName="DAP_HOR" />
+                <ScalarProperty Name="DAP_LF_HOR" ColumnName="DAP_LF_HOR" />
+                <ScalarProperty Name="DAP_LF_VER" ColumnName="DAP_LF_VER" />
+                <ScalarProperty Name="DAP_VER" ColumnName="DAP_VER" />
+                <ScalarProperty Name="DENSITY" ColumnName="DENSITY" />
+                <ScalarProperty Name="DESICCANT_TYPE" ColumnName="DESICCANT_TYPE" />
+                <ScalarProperty Name="DESICCANT_UNIT" ColumnName="DESICCANT_UNIT" />
+                <ScalarProperty Name="DIAMENSION_W1" ColumnName="DIAMENSION_W1" />
+                <ScalarProperty Name="DIAMENSION_W2" ColumnName="DIAMENSION_W2" />
+                <ScalarProperty Name="DIAMENSION_W3" ColumnName="DIAMENSION_W3" />
+                <ScalarProperty Name="DIAMETER_MM" ColumnName="DIAMETER_MM" />
+                <ScalarProperty Name="DIAMETER_UM" ColumnName="DIAMETER_UM" />
+                <ScalarProperty Name="DIAMOND_GRIT" ColumnName="DIAMOND_GRIT" />
+                <ScalarProperty Name="DICING_TAPE" ColumnName="DICING_TAPE" />
+                <ScalarProperty Name="DICING_TAPE_BASE_FILM" ColumnName="DICING_TAPE_BASE_FILM" />
+                <ScalarProperty Name="DICING_TAPE_PART" ColumnName="DICING_TAPE_PART" />
+                <ScalarProperty Name="DICING_TAPE_SUPPLIER" ColumnName="DICING_TAPE_SUPPLIER" />
+                <ScalarProperty Name="DICING_TAPE_UV_COND" ColumnName="DICING_TAPE_UV_COND" />
+                <ScalarProperty Name="DIE_BACK_FINISHING" ColumnName="DIE_BACK_FINISHING" />
+                <ScalarProperty Name="DIE_FINAL_THICKNESS" ColumnName="DIE_FINAL_THICKNESS" />
+                <ScalarProperty Name="DIE_FRONT_FINISHING" ColumnName="DIE_FRONT_FINISHING" />
+                <ScalarProperty Name="DIE_ID" ColumnName="DIE_ID" />
+                <ScalarProperty Name="DIE_INTIAL_THICKNESS" ColumnName="DIE_INTIAL_THICKNESS" />
+                <ScalarProperty Name="DIE_PHYSICAL" ColumnName="DIE_PHYSICAL" />
+                <ScalarProperty Name="DIE_REVISION" ColumnName="DIE_REVISION" />
+                <ScalarProperty Name="DIE_SHELF" ColumnName="DIE_SHELF" />
+                <ScalarProperty Name="DIE_SIZE" ColumnName="DIE_SIZE" />
+                <ScalarProperty Name="DIE_SIZE_X" ColumnName="DIE_SIZE_X" />
+                <ScalarProperty Name="DIE_SIZE_Y" ColumnName="DIE_SIZE_Y" />
+                <ScalarProperty Name="DIE_SPEC" ColumnName="DIE_SPEC" />
+                <ScalarProperty Name="DIE_SUPPLIER_NAME" ColumnName="DIE_SUPPLIER_NAME" />
+                <ScalarProperty Name="DIMENSION_A" ColumnName="DIMENSION_A" />
+                <ScalarProperty Name="DIMENSION_B" ColumnName="DIMENSION_B" />
+                <ScalarProperty Name="DIMENSION_C" ColumnName="DIMENSION_C" />
+                <ScalarProperty Name="DIMENSION_D" ColumnName="DIMENSION_D" />
+                <ScalarProperty Name="DIMENSION_E" ColumnName="DIMENSION_E" />
+                <ScalarProperty Name="DIMENSION_F" ColumnName="DIMENSION_F" />
+                <ScalarProperty Name="DIMENSION_G" ColumnName="DIMENSION_G" />
+                <ScalarProperty Name="DIMENSION_H" ColumnName="DIMENSION_H" />
+                <ScalarProperty Name="DIMENSION_I" ColumnName="DIMENSION_I" />
+                <ScalarProperty Name="DIMENSION_J" ColumnName="DIMENSION_J" />
+                <ScalarProperty Name="DIMENSION_K" ColumnName="DIMENSION_K" />
+                <ScalarProperty Name="DIMENSION_L" ColumnName="DIMENSION_L" />
+                <ScalarProperty Name="DIMENSION_M" ColumnName="DIMENSION_M" />
+                <ScalarProperty Name="DIMENSION_MM" ColumnName="DIMENSION_MM" />
+                <ScalarProperty Name="DIMENSION_N" ColumnName="DIMENSION_N" />
+                <ScalarProperty Name="DIMENSION_O" ColumnName="DIMENSION_O" />
+                <ScalarProperty Name="DIMENSION_P" ColumnName="DIMENSION_P" />
+                <ScalarProperty Name="DIMENSION_Q" ColumnName="DIMENSION_Q" />
+                <ScalarProperty Name="DIMENSION_R" ColumnName="DIMENSION_R" />
+                <ScalarProperty Name="DIMENSION_S" ColumnName="DIMENSION_S" />
+                <ScalarProperty Name="DIMENSION_T" ColumnName="DIMENSION_T" />
+                <ScalarProperty Name="DIMENSION_U" ColumnName="DIMENSION_U" />
+                <ScalarProperty Name="DIMENSION_V" ColumnName="DIMENSION_V" />
+                <ScalarProperty Name="DIMENSION_W" ColumnName="DIMENSION_W" />
+                <ScalarProperty Name="DIMENSION_X" ColumnName="DIMENSION_X" />
+                <ScalarProperty Name="DIMENSION_Y" ColumnName="DIMENSION_Y" />
+                <ScalarProperty Name="DIMENSION_Z" ColumnName="DIMENSION_Z" />
+                <ScalarProperty Name="DIMPLE_DESIGN" ColumnName="DIMPLE_DESIGN" />
+                <ScalarProperty Name="DOWN_SET_DEPTH" ColumnName="DOWN_SET_DEPTH" />
+                <ScalarProperty Name="EIA_SIZE_CODE" ColumnName="EIA_SIZE_CODE" />
+                <ScalarProperty Name="ELASTIC" ColumnName="ELASTIC" />
+                <ScalarProperty Name="ELECTRICAL_RESIS" ColumnName="ELECTRICAL_RESIS" />
+                <ScalarProperty Name="ELONGATION" ColumnName="ELONGATION" />
+                <ScalarProperty Name="EPOXY_TYPE" ColumnName="EPOXY_TYPE" />
+                <ScalarProperty Name="ESD_OR" ColumnName="ESD_OR" />
+                <ScalarProperty Name="EXPOSE_PAD_HOR" ColumnName="EXPOSE_PAD_HOR" />
+                <ScalarProperty Name="EXPOSE_PAD_VER" ColumnName="EXPOSE_PAD_VER" />
+                <ScalarProperty Name="EXPOSURE_MAX" ColumnName="EXPOSURE_MAX" />
+                <ScalarProperty Name="EXPOSURE_MIN" ColumnName="EXPOSURE_MIN" />
+                <ScalarProperty Name="EXPOSURE_THICKNESS" ColumnName="EXPOSURE_THICKNESS" />
+                <ScalarProperty Name="FACE_ANGLE" ColumnName="FACE_ANGLE" />
+                <ScalarProperty Name="FC_PAD_FINISH" ColumnName="FC_PAD_FINISH" />
+                <ScalarProperty Name="FILLER_SIZE_AVG" ColumnName="FILLER_SIZE_AVG" />
+                <ScalarProperty Name="FILLER_SIZE_MAX" ColumnName="FILLER_SIZE_MAX" />
+                <ScalarProperty Name="FILLER_TYPE" ColumnName="FILLER_TYPE" />
+                <ScalarProperty Name="FIRST_POCKET_X" ColumnName="FIRST_POCKET_X" />
+                <ScalarProperty Name="FIRST_POCKET_Y" ColumnName="FIRST_POCKET_Y" />
+                <ScalarProperty Name="FLAG_BUSS" ColumnName="FLAG_BUSS" />
+                <ScalarProperty Name="FLAG_NO_TAPE" ColumnName="FLAG_NO_TAPE" />
+                <ScalarProperty Name="FLUX_CLASSIFICATION" ColumnName="FLUX_CLASSIFICATION" />
+                <ScalarProperty Name="FORMAT" ColumnName="FORMAT" />
+                <ScalarProperty Name="GAP_BETWEEN_BOAC" ColumnName="GAP_BETWEEN_BOAC" />
+                <ScalarProperty Name="GAS_COMPOSITION" ColumnName="GAS_COMPOSITION" />
+                <ScalarProperty Name="GEL_COAT" ColumnName="GEL_COAT" />
+                <ScalarProperty Name="GEL_TIME" ColumnName="GEL_TIME" />
+                <ScalarProperty Name="GLUE_THICKNESS" ColumnName="GLUE_THICKNESS" />
+                <ScalarProperty Name="GLUE_TYPE" ColumnName="GLUE_TYPE" />
+                <ScalarProperty Name="GOLD_THICKNESS" ColumnName="GOLD_THICKNESS" />
+                <ScalarProperty Name="GRIT_CONCENTRATION" ColumnName="GRIT_CONCENTRATION" />
+                <ScalarProperty Name="GROUND_WIRE" ColumnName="GROUND_WIRE" />
+                <ScalarProperty Name="HALOGEN_FREE" ColumnName="HALOGEN_FREE" />
+                <ScalarProperty Name="HALOGEN_FREE_FLGAG" ColumnName="HALOGEN_FREE_FLGAG" />
+                <ScalarProperty Name="HARD_AU" ColumnName="HARD_AU" />
+                <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+                <ScalarProperty Name="HIC_COLOR" ColumnName="HIC_COLOR" />
+                <ScalarProperty Name="HIC_DOT" ColumnName="HIC_DOT" />
+                <ScalarProperty Name="HIC_TYPE" ColumnName="HIC_TYPE" />
+                <ScalarProperty Name="HOLE_DIAMETER" ColumnName="HOLE_DIAMETER" />
+                <ScalarProperty Name="HUB_DIAMETER" ColumnName="HUB_DIAMETER" />
+                <ScalarProperty Name="IN_SIDE_DIMENSION" ColumnName="IN_SIDE_DIMENSION" />
+                <ScalarProperty Name="INDUCTANCE" ColumnName="INDUCTANCE" />
+                <ScalarProperty Name="INK" ColumnName="INK" />
+                <ScalarProperty Name="INK_TYPE" ColumnName="INK_TYPE" />
+                <ScalarProperty Name="INNER_SHAMFER" ColumnName="INNER_SHAMFER" />
+                <ScalarProperty Name="IS_OPERATING_SUPPLY" ColumnName="IS_OPERATING_SUPPLY" />
+                <ScalarProperty Name="LABEL_ADHESIVE" ColumnName="LABEL_ADHESIVE" />
+                <ScalarProperty Name="LABEL_COLOR" ColumnName="LABEL_COLOR" />
+                <ScalarProperty Name="LABEL_CORNER" ColumnName="LABEL_CORNER" />
+                <ScalarProperty Name="LABEL_GAP" ColumnName="LABEL_GAP" />
+                <ScalarProperty Name="LABEL_HEIGHT" ColumnName="LABEL_HEIGHT" />
+                <ScalarProperty Name="LABEL_PRINT" ColumnName="LABEL_PRINT" />
+                <ScalarProperty Name="LABEL_THICKNESS" ColumnName="LABEL_THICKNESS" />
+                <ScalarProperty Name="LABEL_TYPE" ColumnName="LABEL_TYPE" />
+                <ScalarProperty Name="LABEL_WIDTH" ColumnName="LABEL_WIDTH" />
+                <ScalarProperty Name="LAYER_COUNT" ColumnName="LAYER_COUNT" />
+                <ScalarProperty Name="LEAD_COUNT" ColumnName="LEAD_COUNT" />
+                <ScalarProperty Name="LEAD_COUNT_IO" ColumnName="LEAD_COUNT_IO" />
+                <ScalarProperty Name="LEAD_FRAME_FINISH" ColumnName="LEAD_FRAME_FINISH" />
+                <ScalarProperty Name="LEAD_FRAME_TYPE" ColumnName="LEAD_FRAME_TYPE" />
+                <ScalarProperty Name="LEAD_LENGTH" ColumnName="LEAD_LENGTH" />
+                <ScalarProperty Name="LEAD_PITCH" ColumnName="LEAD_PITCH" />
+                <ScalarProperty Name="LEAD_WIDTH" ColumnName="LEAD_WIDTH" />
+                <ScalarProperty Name="LENGTH" ColumnName="LENGTH" />
+                <ScalarProperty Name="LENGTH_MM" ColumnName="LENGTH_MM" />
+                <ScalarProperty Name="LF_LENGTH" ColumnName="LF_LENGTH" />
+                <ScalarProperty Name="LF_PACKAGE_GROUP" ColumnName="LF_PACKAGE_GROUP" />
+                <ScalarProperty Name="LF_TAPE_NAME" ColumnName="LF_TAPE_NAME" />
+                <ScalarProperty Name="LF_WIDTH" ColumnName="LF_WIDTH" />
+                <ScalarProperty Name="LID_HEIGHT" ColumnName="LID_HEIGHT" />
+                <ScalarProperty Name="LID_LENGTH" ColumnName="LID_LENGTH" />
+                <ScalarProperty Name="LID_WIDTH" ColumnName="LID_WIDTH" />
+                <ScalarProperty Name="LIFE_EXTENSION_DAY" ColumnName="LIFE_EXTENSION_DAY" />
+                <ScalarProperty Name="LIFE_EXTENSION_TIME" ColumnName="LIFE_EXTENSION_TIME" />
+                <ScalarProperty Name="LIFE_TIME" ColumnName="LIFE_TIME" />
+                <ScalarProperty Name="LIQUIDUS_TEMP" ColumnName="LIQUIDUS_TEMP" />
+                <ScalarProperty Name="MAP_FILE_NAME" ColumnName="MAP_FILE_NAME" />
+                <ScalarProperty Name="MAT_LENGTH" ColumnName="MAT_LENGTH" />
+                <ScalarProperty Name="MATCH_LEADFRAME" ColumnName="MATCH_LEADFRAME" />
+                <ScalarProperty Name="MATERIAL_PART" ColumnName="MATERIAL_PART" />
+                <ScalarProperty Name="MATERIAL_SIZE" ColumnName="MATERIAL_SIZE" />
+                <ScalarProperty Name="MATRIX" ColumnName="MATRIX" />
+                <ScalarProperty Name="MATRIX_ROW" ColumnName="MATRIX_ROW" />
+                <ScalarProperty Name="MAX_PARTICLE_SIZE" ColumnName="MAX_PARTICLE_SIZE" />
+                <ScalarProperty Name="MES_UNIT_PER_STRIP" ColumnName="MES_UNIT_PER_STRIP" />
+                <ScalarProperty Name="MELTING_POINT" ColumnName="MELTING_POINT" />
+                <ScalarProperty Name="METAL_ON_SAW_STREET" ColumnName="METAL_ON_SAW_STREET" />
+                <ScalarProperty Name="METAL_ON_THICKNESS" ColumnName="METAL_ON_THICKNESS" />
+                <ScalarProperty Name="MOLD_TEMPERATURE" ColumnName="MOLD_TEMPERATURE" />
+                <ScalarProperty Name="MULTI_DIE_ID" ColumnName="MULTI_DIE_ID" />
+                <ScalarProperty Name="MULTI_DIE_SIZE" ColumnName="MULTI_DIE_SIZE" />
+                <ScalarProperty Name="MVTR_MAX" ColumnName="MVTR_MAX" />
+                <ScalarProperty Name="NARRATIVE" ColumnName="NARRATIVE" />
+                <ScalarProperty Name="NUMBER_OF_BLOCK" ColumnName="NUMBER_OF_BLOCK" />
+                <ScalarProperty Name="NUMBER_OF_HOLD" ColumnName="NUMBER_OF_HOLD" />
+                <ScalarProperty Name="NUMBER_OF_PAD" ColumnName="NUMBER_OF_PAD" />
+                <ScalarProperty Name="NUMBER_OF_PANEL" ColumnName="NUMBER_OF_PANEL" />
+                <ScalarProperty Name="NUMBER_OF_ROW" ColumnName="NUMBER_OF_ROW" />
+                <ScalarProperty Name="NUMBER_OF_UNIT" ColumnName="NUMBER_OF_UNIT" />
+                <ScalarProperty Name="OPERATION_USED" ColumnName="OPERATION_USED" />
+                <ScalarProperty Name="OS_MAT_LENGTH" ColumnName="OS_MAT_LENGTH" />
+                <ScalarProperty Name="OTHER_CHEMICAL" ColumnName="OTHER_CHEMICAL" />
+                <ScalarProperty Name="OUT_SIDE_DIMENSION" ColumnName="OUT_SIDE_DIMENSION" />
+                <ScalarProperty Name="OUTSIDE_RADIAN" ColumnName="OUTSIDE_RADIAN" />
+                <ScalarProperty Name="PACK_TYPE" ColumnName="PACK_TYPE" />
+                <ScalarProperty Name="PACKAGE_BODY_LENGHT" ColumnName="PACKAGE_BODY_LENGHT" />
+                <ScalarProperty Name="PACKAGE_BODY_SIZE" ColumnName="PACKAGE_BODY_SIZE" />
+                <ScalarProperty Name="PACKAGE_BODY_WIDTH" ColumnName="PACKAGE_BODY_WIDTH" />
+                <ScalarProperty Name="PACKAGE_DIMENSION" ColumnName="PACKAGE_DIMENSION" />
+                <ScalarProperty Name="PACKAGE_GROUP" ColumnName="PACKAGE_GROUP" />
+                <ScalarProperty Name="PACKAGE_LENGTH" ColumnName="PACKAGE_LENGTH" />
+                <ScalarProperty Name="PACKAGE_WIDTH" ColumnName="PACKAGE_WIDTH" />
+                <ScalarProperty Name="PACKING_TYPE" ColumnName="PACKING_TYPE" />
+                <ScalarProperty Name="PANEL_LENGTH" ColumnName="PANEL_LENGTH" />
+                <ScalarProperty Name="PANEL_WIDTH" ColumnName="PANEL_WIDTH" />
+                <ScalarProperty Name="PANTONE_NO" ColumnName="PANTONE_NO" />
+                <ScalarProperty Name="PAPER_COLOR" ColumnName="PAPER_COLOR" />
+                <ScalarProperty Name="PARTICLE_SIZE" ColumnName="PARTICLE_SIZE" />
+                <ScalarProperty Name="PASSIVATION_THK" ColumnName="PASSIVATION_THK" />
+                <ScalarProperty Name="PASSIVATION_TYPE" ColumnName="PASSIVATION_TYPE" />
+                <ScalarProperty Name="PCF_PERCENT" ColumnName="PCF_PERCENT" />
+                <ScalarProperty Name="PH" ColumnName="PH" />
+                <ScalarProperty Name="PIN_HOLE" ColumnName="PIN_HOLE" />
+                <ScalarProperty Name="PIN1_LOCATION" ColumnName="PIN1_LOCATION" />
+                <ScalarProperty Name="PITCH" ColumnName="PITCH" />
+                <ScalarProperty Name="PLATING" ColumnName="PLATING" />
+                <ScalarProperty Name="PLATING_MATERIALS" ColumnName="PLATING_MATERIALS" />
+                <ScalarProperty Name="PLATING_THICKNESS" ColumnName="PLATING_THICKNESS" />
+                <ScalarProperty Name="PLATING_AREA" ColumnName="PLATING_AREA" />
+                <ScalarProperty Name="PLATING_TYPE" ColumnName="PLATING_TYPE" />
+                <ScalarProperty Name="PLUG_PIN_COLOR" ColumnName="PLUG_PIN_COLOR" />
+                <ScalarProperty Name="PLUG_PIN_LENGTH" ColumnName="PLUG_PIN_LENGTH" />
+                <ScalarProperty Name="PLUG_PIN_MATERIAL" ColumnName="PLUG_PIN_MATERIAL" />
+                <ScalarProperty Name="PLUG_PIN_WIDTH" ColumnName="PLUG_PIN_WIDTH" />
+                <ScalarProperty Name="POA_OR_CUP" ColumnName="POA_OR_CUP" />
+                <ScalarProperty Name="POCKET_DIMENSION_A0" ColumnName="POCKET_DIMENSION_A0" />
+                <ScalarProperty Name="POCKET_DIMENSION_B0" ColumnName="POCKET_DIMENSION_B0" />
+                <ScalarProperty Name="POCKET_DIMENSION_F" ColumnName="POCKET_DIMENSION_F" />
+                <ScalarProperty Name="POCKET_DIMENSION_K0" ColumnName="POCKET_DIMENSION_K0" />
+                <ScalarProperty Name="POCKET_DIMENSION_K1" ColumnName="POCKET_DIMENSION_K1" />
+                <ScalarProperty Name="POCKET_DIMENSION_P1" ColumnName="POCKET_DIMENSION_P1" />
+                <ScalarProperty Name="POCKET_PITCH_X" ColumnName="POCKET_PITCH_X" />
+                <ScalarProperty Name="POCKET_PITCH_Y" ColumnName="POCKET_PITCH_Y" />
+                <ScalarProperty Name="POWDER_TYPE" ColumnName="POWDER_TYPE" />
+                <ScalarProperty Name="POWER_RATING" ColumnName="POWER_RATING" />
+                <ScalarProperty Name="PRE_PREG" ColumnName="PRE_PREG" />
+                <ScalarProperty Name="PRINTING" ColumnName="PRINTING" />
+                <ScalarProperty Name="PRINTING_COLOR" ColumnName="PRINTING_COLOR" />
+                <ScalarProperty Name="PRINTING_INFORMATION" ColumnName="PRINTING_INFORMATION" />
+                <ScalarProperty Name="PRINTING_POSITION" ColumnName="PRINTING_POSITION" />
+                <ScalarProperty Name="PRODUCT_APPLICATION" ColumnName="PRODUCT_APPLICATION" />
+                <ScalarProperty Name="PRODUCT_NAME" ColumnName="PRODUCT_NAME" />
+                <ScalarProperty Name="PUCH" ColumnName="PUCH" />
+                <ScalarProperty Name="PURPOSE_OF_USE" ColumnName="PURPOSE_OF_USE" />
+                <ScalarProperty Name="QTY_POCKET" ColumnName="QTY_POCKET" />
+                <ScalarProperty Name="QUANTITY_PER_ROLL" ColumnName="QUANTITY_PER_ROLL" />
+                <ScalarProperty Name="QUANTITY_PER_SHEET" ColumnName="QUANTITY_PER_SHEET" />
+                <ScalarProperty Name="RATE_CURRENT" ColumnName="RATE_CURRENT" />
+                <ScalarProperty Name="RATE_VOLTAGE" ColumnName="RATE_VOLTAGE" />
+                <ScalarProperty Name="RAW_MAT_TYPE" ColumnName="RAW_MAT_TYPE" />
+                <ScalarProperty Name="RAW_MATERIAL" ColumnName="RAW_MATERIAL" />
+                <ScalarProperty Name="RDS" ColumnName="RDS" />
+                <ScalarProperty Name="RECTAN_BUMP_HEIGHT" ColumnName="RECTAN_BUMP_HEIGHT" />
+                <ScalarProperty Name="RECTAN_BUMP_PITCH" ColumnName="RECTAN_BUMP_PITCH" />
+                <ScalarProperty Name="RECTANGULAR_BUMP" ColumnName="RECTANGULAR_BUMP" />
+                <ScalarProperty Name="REEL_COLOR" ColumnName="REEL_COLOR" />
+                <ScalarProperty Name="REEL_DIAMETER" ColumnName="REEL_DIAMETER" />
+                <ScalarProperty Name="REEL_MATERIAL" ColumnName="REEL_MATERIAL" />
+                <ScalarProperty Name="REEL_TYPE" ColumnName="REEL_TYPE" />
+                <ScalarProperty Name="RESISTANCE" ColumnName="RESISTANCE" />
+                <ScalarProperty Name="RING_SIZE" ColumnName="RING_SIZE" />
+                <ScalarProperty Name="ROLL_LENGTH" ColumnName="ROLL_LENGTH" />
+                <ScalarProperty Name="ROLL_LENGTH_MM" ColumnName="ROLL_LENGTH_MM" />
+                <ScalarProperty Name="ROLL_SIZE_DIAMETER" ColumnName="ROLL_SIZE_DIAMETER" />
+                <ScalarProperty Name="ROLL_SIZE_DIMENSION" ColumnName="ROLL_SIZE_DIMENSION" />
+                <ScalarProperty Name="ROLL_SIZE_ID" ColumnName="ROLL_SIZE_ID" />
+                <ScalarProperty Name="ROLL_SIZE_OD" ColumnName="ROLL_SIZE_OD" />
+                <ScalarProperty Name="ROLL_TYPE" ColumnName="ROLL_TYPE" />
+                <ScalarProperty Name="ROUGHNESS" ColumnName="ROUGHNESS" />
+                <ScalarProperty Name="ROW_PER_BLOCK" ColumnName="ROW_PER_BLOCK" />
+                <ScalarProperty Name="ROW_PER_PANEL" ColumnName="ROW_PER_PANEL" />
+                <ScalarProperty Name="RUBBERTIP_TYPE" ColumnName="RUBBERTIP_TYPE" />
+                <ScalarProperty Name="SAW_STREET_X" ColumnName="SAW_STREET_X" />
+                <ScalarProperty Name="SAW_STREET_Y" ColumnName="SAW_STREET_Y" />
+                <ScalarProperty Name="SAW_WIDTH" ColumnName="SAW_WIDTH" />
+                <ScalarProperty Name="SEAL_RING" ColumnName="SEAL_RING" />
+                <ScalarProperty Name="SEAM_WIDTH" ColumnName="SEAM_WIDTH" />
+                <ScalarProperty Name="SFS_APPLICATION" ColumnName="SFS_APPLICATION" />
+                <ScalarProperty Name="SHAMFER_DIAMETER" ColumnName="SHAMFER_DIAMETER" />
+                <ScalarProperty Name="SHAPE" ColumnName="SHAPE" />
+                <ScalarProperty Name="SHEET_ROLL" ColumnName="SHEET_ROLL" />
+                <ScalarProperty Name="SHIPPING_FORM" ColumnName="SHIPPING_FORM" />
+                <ScalarProperty Name="SILICON_TECHNOLOGY" ColumnName="SILICON_TECHNOLOGY" />
+                <ScalarProperty Name="SIZE_LENGTH" ColumnName="SIZE_LENGTH" />
+                <ScalarProperty Name="SIZE_MM" ColumnName="SIZE_MM" />
+                <ScalarProperty Name="SIZE_WIDTH" ColumnName="SIZE_WIDTH" />
+                <ScalarProperty Name="SIZE_X" ColumnName="SIZE_X" />
+                <ScalarProperty Name="SIZE_Y" ColumnName="SIZE_Y" />
+                <ScalarProperty Name="SLP_APPLICATION" ColumnName="SLP_APPLICATION" />
+                <ScalarProperty Name="SOLDER_BALL_PAD_FINISH" ColumnName="SOLDER_BALL_PAD_FINISH" />
+                <ScalarProperty Name="SOLDER_BALL_PAD_PITCH" ColumnName="SOLDER_BALL_PAD_PITCH" />
+                <ScalarProperty Name="SOLDER_COMPOSITION" ColumnName="SOLDER_COMPOSITION" />
+                <ScalarProperty Name="SOLDER_MASK" ColumnName="SOLDER_MASK" />
+                <ScalarProperty Name="SOLDER_PASTE" ColumnName="SOLDER_PASTE" />
+                <ScalarProperty Name="SOLDER_TIP_THICKNESS" ColumnName="SOLDER_TIP_THICKNESS" />
+                <ScalarProperty Name="SOLIDUS_TEMPERATURE" ColumnName="SOLIDUS_TEMPERATURE" />
+                <ScalarProperty Name="SPECIFIC_GRAVITY" ColumnName="SPECIFIC_GRAVITY" />
+                <ScalarProperty Name="SPIRAL_FLOW" ColumnName="SPIRAL_FLOW" />
+                <ScalarProperty Name="SPROCKET_HOLES" ColumnName="SPROCKET_HOLES" />
+                <ScalarProperty Name="STAGGERED_PAD" ColumnName="STAGGERED_PAD" />
+                <ScalarProperty Name="STICKY_FILM_THICKNESS" ColumnName="STICKY_FILM_THICKNESS" />
+                <ScalarProperty Name="STORAGE_CONDITION" ColumnName="STORAGE_CONDITION" />
+                <ScalarProperty Name="STORAGE_TEMPERATURE" ColumnName="STORAGE_TEMPERATURE" />
+                <ScalarProperty Name="SUBSTRATE_LENGTH" ColumnName="SUBSTRATE_LENGTH" />
+                <ScalarProperty Name="SUBSTRATE_PROCESS" ColumnName="SUBSTRATE_PROCESS" />
+                <ScalarProperty Name="SUBSTRATE_THICKNESS" ColumnName="SUBSTRATE_THICKNESS" />
+                <ScalarProperty Name="SUBSTRATE_WIDTH" ColumnName="SUBSTRATE_WIDTH" />
+                <ScalarProperty Name="SUPPLIER_SITE" ColumnName="SUPPLIER_SITE" />
+                <ScalarProperty Name="SUPPLIER_TAPE" ColumnName="SUPPLIER_TAPE" />
+                <ScalarProperty Name="SURFACE_FILM" ColumnName="SURFACE_FILM" />
+                <ScalarProperty Name="TAIKO_LOWER_RING_THK" ColumnName="TAIKO_LOWER_RING_THK" />
+                <ScalarProperty Name="TAIKO_LOWER_RING_WITH" ColumnName="TAIKO_LOWER_RING_WITH" />
+                <ScalarProperty Name="TAIKO_RING_TO_WAFER_GAP" ColumnName="TAIKO_RING_TO_WAFER_GAP" />
+                <ScalarProperty Name="TAIKO_UPPER_RING_WIDTH" ColumnName="TAIKO_UPPER_RING_WIDTH" />
+                <ScalarProperty Name="TAIKO_WAFER_EDGE" ColumnName="TAIKO_WAFER_EDGE" />
+                <ScalarProperty Name="TAIKO_WAFER_EDGE_ACTIVE" ColumnName="TAIKO_WAFER_EDGE_ACTIVE" />
+                <ScalarProperty Name="TAIKO_WAFER_SIZE" ColumnName="TAIKO_WAFER_SIZE" />
+                <ScalarProperty Name="TAIL_LENGTH" ColumnName="TAIL_LENGTH" />
+                <ScalarProperty Name="TAPE_COLOR" ColumnName="TAPE_COLOR" />
+                <ScalarProperty Name="TAPE_MATERIAL" ColumnName="TAPE_MATERIAL" />
+                <ScalarProperty Name="TAPE_THICKNESS" ColumnName="TAPE_THICKNESS" />
+                <ScalarProperty Name="TAPE_WIDTH" ColumnName="TAPE_WIDTH" />
+                <ScalarProperty Name="TENSILE_STRENGTH" ColumnName="TENSILE_STRENGTH" />
+                <ScalarProperty Name="TG" ColumnName="TG" />
+                <ScalarProperty Name="THAWING_TIME" ColumnName="THAWING_TIME" />
+                <ScalarProperty Name="THERMAL_CONDUCTIVITY" ColumnName="THERMAL_CONDUCTIVITY" />
+                <ScalarProperty Name="THICKNESS" ColumnName="THICKNESS" />
+                <ScalarProperty Name="TIE_BAR_DESIGN" ColumnName="TIE_BAR_DESIGN" />
+                <ScalarProperty Name="TIP_DIAMETER" ColumnName="TIP_DIAMETER" />
+                <ScalarProperty Name="TIP_FINISH" ColumnName="TIP_FINISH" />
+                <ScalarProperty Name="TIP_FINISH_TYPE" ColumnName="TIP_FINISH_TYPE" />
+                <ScalarProperty Name="TOLERANCE" ColumnName="TOLERANCE" />
+                <ScalarProperty Name="TOP_METAL_LAYER_THK" ColumnName="TOP_METAL_LAYER_THK" />
+                <ScalarProperty Name="TOP_PLATING" ColumnName="TOP_PLATING" />
+                <ScalarProperty Name="TOP_POCKET_PITCH" ColumnName="TOP_POCKET_PITCH" />
+                <ScalarProperty Name="TOTAL_CIRCULAR_BUMP" ColumnName="TOTAL_CIRCULAR_BUMP" />
+                <ScalarProperty Name="TOTAL_RECTAN_BUMP" ColumnName="TOTAL_RECTAN_BUMP" />
+                <ScalarProperty Name="TOTAL_SOLDER_BUMP" ColumnName="TOTAL_SOLDER_BUMP" />
+                <ScalarProperty Name="TOTAL_THICKNESS" ColumnName="TOTAL_THICKNESS" />
+                <ScalarProperty Name="TRACE_PITCH" ColumnName="TRACE_PITCH" />
+                <ScalarProperty Name="TRACE_SPACE" ColumnName="TRACE_SPACE" />
+                <ScalarProperty Name="TRACE_WIDTH" ColumnName="TRACE_WIDTH" />
+                <ScalarProperty Name="TRAN_TEMP_IN" ColumnName="TRAN_TEMP_IN" />
+                <ScalarProperty Name="TRAY_CLIP_COLOR" ColumnName="TRAY_CLIP_COLOR" />
+                <ScalarProperty Name="TRAY_CLIPS" ColumnName="TRAY_CLIPS" />
+                <ScalarProperty Name="TRAY_COLOR" ColumnName="TRAY_COLOR" />
+                <ScalarProperty Name="TRAY_LEFT" ColumnName="TRAY_LEFT" />
+                <ScalarProperty Name="TRAY_LENGTH" ColumnName="TRAY_LENGTH" />
+                <ScalarProperty Name="TRAY_MATERIAL" ColumnName="TRAY_MATERIAL" />
+                <ScalarProperty Name="TRAY_PRINTING" ColumnName="TRAY_PRINTING" />
+                <ScalarProperty Name="TRAY_RIGHT" ColumnName="TRAY_RIGHT" />
+                <ScalarProperty Name="TRAY_TEMP_MAX" ColumnName="TRAY_TEMP_MAX" />
+                <ScalarProperty Name="TRAY_WIDTH" ColumnName="TRAY_WIDTH" />
+                <ScalarProperty Name="TUBE_COLOR" ColumnName="TUBE_COLOR" />
+                <ScalarProperty Name="TUBE_LENGTH" ColumnName="TUBE_LENGTH" />
+                <ScalarProperty Name="TUBE_MATERIAL" ColumnName="TUBE_MATERIAL" />
+                <ScalarProperty Name="TUBE_THICKNESS" ColumnName="TUBE_THICKNESS" />
+                <ScalarProperty Name="TUBE_WIDTH_INNER" ColumnName="TUBE_WIDTH_INNER" />
+                <ScalarProperty Name="TUBE_WIDTH_OUTER" ColumnName="TUBE_WIDTH_OUTER" />
+                <ScalarProperty Name="TYPE_HUB" ColumnName="TYPE_HUB" />
+                <ScalarProperty Name="TYPICAL_ACID" ColumnName="TYPICAL_ACID" />
+                <ScalarProperty Name="UN_NO" ColumnName="UN_NO" />
+                <ScalarProperty Name="UNIT_OF_LEAD_COUNT" ColumnName="UNIT_OF_LEAD_COUNT" />
+                <ScalarProperty Name="UNIT_PER_COL" ColumnName="UNIT_PER_COL" />
+                <ScalarProperty Name="UNIT_PER_ROW" ColumnName="UNIT_PER_ROW" />
+                <ScalarProperty Name="UNIT_PER_STRIP" ColumnName="UNIT_PER_STRIP" />
+                <ScalarProperty Name="UNIT_PER_TRAY" ColumnName="UNIT_PER_TRAY" />
+                <ScalarProperty Name="UNIT_PER_TUBE" ColumnName="UNIT_PER_TUBE" />
+                <ScalarProperty Name="UNIT_PER_WAFER" ColumnName="UNIT_PER_WAFER" />
+                <ScalarProperty Name="USAGE_ONE_CYCLE" ColumnName="USAGE_ONE_CYCLE" />
+                <ScalarProperty Name="UV_TAPE" ColumnName="UV_TAPE" />
+                <ScalarProperty Name="VACCUM_SPOOL" ColumnName="VACCUM_SPOOL" />
+                <ScalarProperty Name="VIA_LAND" ColumnName="VIA_LAND" />
+                <ScalarProperty Name="VIA_ON_PAD" ColumnName="VIA_ON_PAD" />
+                <ScalarProperty Name="VIA_PLUG_MATERIAL" ColumnName="VIA_PLUG_MATERIAL" />
+                <ScalarProperty Name="VISCOSITY" ColumnName="VISCOSITY" />
+                <ScalarProperty Name="VISCOSITY_COND" ColumnName="VISCOSITY_COND" />
+                <ScalarProperty Name="VOLUME" ColumnName="VOLUME" />
+                <ScalarProperty Name="VOLUME_RESISTIVITY" ColumnName="VOLUME_RESISTIVITY" />
+                <ScalarProperty Name="WAFER_BACKSIDE" ColumnName="WAFER_BACKSIDE" />
+                <ScalarProperty Name="WAFER_CONDITION" ColumnName="WAFER_CONDITION" />
+                <ScalarProperty Name="WAFER_DIAMETER" ColumnName="WAFER_DIAMETER" />
+                <ScalarProperty Name="WAFER_SIZE" ColumnName="WAFER_SIZE" />
+                <ScalarProperty Name="WAFER_FAB" ColumnName="WAFER_FAB" />
+                <ScalarProperty Name="WAFER_INKED" ColumnName="WAFER_INKED" />
+                <ScalarProperty Name="WAFER_MAP" ColumnName="WAFER_MAP" />
+                <ScalarProperty Name="WAFER_PACK_COND" ColumnName="WAFER_PACK_COND" />
+                <ScalarProperty Name="WAFER_TECHNOLOGY" ColumnName="WAFER_TECHNOLOGY" />
+                <ScalarProperty Name="WATER_SOUBLE" ColumnName="WATER_SOUBLE" />
+                <ScalarProperty Name="WAVE_PAPER" ColumnName="WAVE_PAPER" />
+                <ScalarProperty Name="WEIGHT_GRAM" ColumnName="WEIGHT_GRAM" />
+                <ScalarProperty Name="WIDTH_MM" ColumnName="WIDTH_MM" />
+                <ScalarProperty Name="WIRE_ALLOY_A" ColumnName="WIRE_ALLOY_A" />
+                <ScalarProperty Name="WIRE_ALLOY_B" ColumnName="WIRE_ALLOY_B" />
+                <ScalarProperty Name="WIRE_ALLOY_C" ColumnName="WIRE_ALLOY_C" />
+                <ScalarProperty Name="WIRE_HARDNESS" ColumnName="WIRE_HARDNESS" />
+                <ScalarProperty Name="WIRE_LENGTH" ColumnName="WIRE_LENGTH" />
+                <ScalarProperty Name="WIRE_SPOOL_COLOR" ColumnName="WIRE_SPOOL_COLOR" />
+                <ScalarProperty Name="WIRE_SPOOL_IN_DIA" ColumnName="WIRE_SPOOL_IN_DIA" />
+                <ScalarProperty Name="WIRE_TYPE" ColumnName="WIRE_TYPE" />
+                <ScalarProperty Name="X_OUT_COND" ColumnName="X_OUT_COND" />
+                <ScalarProperty Name="MES_MAT_GROUP" ColumnName="MES_MAT_GROUP" />
+                <ScalarProperty Name="FLUX_TYPE" ColumnName="FLUX_TYPE" />
+                <ScalarProperty Name="SOLDER_ALLOY" ColumnName="SOLDER_ALLOY" />
+                <ScalarProperty Name="SOLDER_WIRE_DIAMETER" ColumnName="SOLDER_WIRE_DIAMETER" />
+                <ScalarProperty Name="WIRE_DIAMETER" ColumnName="WIRE_DIAMETER" />
+                <ScalarProperty Name="UTL_WIRE_TYPE" ColumnName="UTL_WIRE_TYPE" />
+                <ScalarProperty Name="MANUFACTURER_WIRE_TYPE" ColumnName="MANUFACTURER_WIRE_TYPE" />
+                <ScalarProperty Name="COMPOUND_GROUP" ColumnName="COMPOUND_GROUP" />
+                <ScalarProperty Name="PELLET_DIAMETER" ColumnName="PELLET_DIAMETER" />
+                <ScalarProperty Name="PELLET_WEIGHT" ColumnName="PELLET_WEIGHT" />
+                <ScalarProperty Name="COMPONENT_PART_NUMBER" ColumnName="COMPONENT_PART_NUMBER" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="STATUS_NAME" ColumnName="STATUS_NAME" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="CREATED_BY_NAME" ColumnName="CREATED_BY_NAME" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="UPDATED_BY_NAME" ColumnName="UPDATED_BY_NAME" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="FAB_CORE" ColumnName="FAB_CORE" />
+                <ScalarProperty Name="FAB_PROCESS" ColumnName="FAB_PROCESS" />
+                <ScalarProperty Name="WAFER_TOPCOAT" ColumnName="WAFER_TOPCOAT" />
+                <ScalarProperty Name="TAIKO_RING_TO_WAFER_GAP_NO" ColumnName="TAIKO_RING_TO_WAFER_GAP_NO" />
+                <ScalarProperty Name="WAFER_NOTCH" ColumnName="WAFER_NOTCH" />
+                <ScalarProperty Name="DIMENSION_A1" ColumnName="DIMENSION_A1" />
+                <ScalarProperty Name="DIMENSION_A2" ColumnName="DIMENSION_A2" />
+                <ScalarProperty Name="DIMENSION_A3" ColumnName="DIMENSION_A3" />
+                <ScalarProperty Name="DIMENSION_A4" ColumnName="DIMENSION_A4" />
+                <ScalarProperty Name="DIMENSION_A5" ColumnName="DIMENSION_A5" />
+                <ScalarProperty Name="DIMENSION_A6" ColumnName="DIMENSION_A6" />
+                <ScalarProperty Name="DIMENSION_A7" ColumnName="DIMENSION_A7" />
+                <ScalarProperty Name="DIMENSION_A8" ColumnName="DIMENSION_A8" />
+                <ScalarProperty Name="DIMENSION_A9" ColumnName="DIMENSION_A9" />
+                <ScalarProperty Name="DIMENSION_B1" ColumnName="DIMENSION_B1" />
+                <ScalarProperty Name="DIMENSION_B2" ColumnName="DIMENSION_B2" />
+                <ScalarProperty Name="DIMENSION_B3" ColumnName="DIMENSION_B3" />
+                <ScalarProperty Name="DIMENSION_B4" ColumnName="DIMENSION_B4" />
+                <ScalarProperty Name="DIMENSION_B5" ColumnName="DIMENSION_B5" />
+                <ScalarProperty Name="DIMENSION_B6" ColumnName="DIMENSION_B6" />
+                <ScalarProperty Name="DIMENSION_B7" ColumnName="DIMENSION_B7" />
+                <ScalarProperty Name="DIMENSION_B8" ColumnName="DIMENSION_B8" />
+                <ScalarProperty Name="DIMENSION_B9" ColumnName="DIMENSION_B9" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
